@@ -100,7 +100,7 @@ const PublicRating = () => {
         
           <div className="flex">
             {ratings.map((elem, ind) => (
-              <div  className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl">{elem}</div>
+              <div  className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl" key={ind}>{elem}</div>
             ))}
           </div>
           </div>
@@ -135,7 +135,7 @@ const PublicRating = () => {
                   <div className="flex flex-col gap-3 w-56  ">
                     <span className="flex">
                       {review.rating.map((elem, ind) => (
-                        <div className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl">
+                        <div className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl" key={ind}>
                           {elem}
                         </div>
                       ))}
