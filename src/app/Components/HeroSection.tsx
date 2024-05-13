@@ -39,7 +39,7 @@ return (
 
          <div className=" bottom-4 right-4  flex mb-2 md:mb-2 sm:mb-2 lg:mb-6xl:mb-6">
           {ratings.map((elem,ind)=>(
-           <div key={ind} style={{color:"yellow"}} className=" text-xl md:text-2xl sm:text-xl lg:text-3xl xl:text-3xl">
+           <div key={ind} className="text-yellow-300 text-xl md:text-2xl sm:text-xl lg:text-3xl xl:text-3xl">
            {elem}
            </div>
           ))}

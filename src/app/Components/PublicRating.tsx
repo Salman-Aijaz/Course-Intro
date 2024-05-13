@@ -100,7 +100,7 @@ const PublicRating = () => {
         
           <div className="flex">
             {ratings.map((elem, ind) => (
-              <div  className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl" key={ind}>{elem}</div>
+              <div key={ind} className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl" >{elem}</div>
             ))}
           </div>
           </div>
@@ -109,6 +109,7 @@ const PublicRating = () => {
       <>
         {reviews.map(
           (review, index) => (
+            console.log("INDEX",index),
             console.log(review.text.length),
             (
               <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[62%]">
@@ -135,7 +136,7 @@ const PublicRating = () => {
                   <div className="flex flex-col gap-3 w-56  ">
                     <span className="flex">
                       {review.rating.map((elem, ind) => (
-                        <div className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl" key={ind}>
+                        <div  key={ind} className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl">
                           {elem}
                         </div>
                       ))}
@@ -175,6 +176,7 @@ const PublicRating = () => {
 
         <div className="flex mt-4  gap-[5px] sm:gap-2 md:gap-4 lg:gap-4 xl:gap-4 ">
           {emptyStars.map((elem, ind) => (
+            // console.log("INDEX of empty star",ind),
             <div
               key={ind}
               className="text-yellow-200 flex p-2 sm:p-4 md:p-4 lg:p-6 xl:p-6  rounded-full	 border-solid	border-2 border-gray-600 relative hover:bg-gray-500  text-lg md:text-2xl sm:text-xl lg:text-3xl xl:text-3xl"
