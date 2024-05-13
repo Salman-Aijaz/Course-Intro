@@ -1,0 +1,203 @@
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import thoughts from "../assets/pngwing.com.png";
+import { FaStar, FaRegStar } from "react-icons/fa";
+import { FaStarHalfStroke } from "react-icons/fa6";
+
+const PublicRating = () => {
+  const ratings = [
+    <FaStar />,
+    <FaStar />,
+    <FaStar />,
+    <FaStarHalfStroke />,
+    <FaRegStar />,
+  ];
+  const fullRatings = [
+    <FaStar />,
+    <FaStar />,
+    <FaStar />,
+    <FaStar />,
+    <FaStarHalfStroke />,
+  ];
+
+  const emptyStars = [
+    <FaRegStar />,
+    <FaRegStar />,
+    <FaRegStar />,
+    <FaRegStar />,
+    <FaRegStar />,
+  ];
+  
+  const reviews = [
+    {
+      name: "Salman",
+      avatarSrc: "https://github.com/shadcn.png",
+      date: "9-May-2024",
+      rating: ratings,
+      text: "This course is very good ",
+    },
+    {
+      name: "Hammad",
+      avatarSrc: "https://github.com/shadcn.png",
+      date: "5-May-2024",
+      rating: fullRatings,
+      text: "Really Appreciate it",
+    },
+    {
+      name: "Muhammad Sufiyan",
+      avatarSrc: "https://github.com/shadcn.png",
+      date: "9-May-2024",
+      rating: ratings,
+      text: "Good course but there is more topics to cover sajlkfsjblskfdljhfshfd",
+    },
+  ];
+
+  const [showFullName, setShowFullName] = useState(false);
+  const [readMore, setReadMore] = useState(false);
+
+  const toggleNameDisplay = () => {
+    setShowFullName(!showFullName);
+  };
+
+  const toggleReadDisplay = () => {
+    setReadMore(!readMore);
+  };
+
+  const getDisplayName = (name: string) => {
+    if (showFullName) {
+      return name;
+    } else {
+      return name.length >= 8 ? `${name.slice(0, 8)} ...` : name;
+    }
+  };
+
+  const getReadMore = (text: string) => {
+    if (readMore) {
+      return text;
+    } else {
+      return text.length > 45 ? `${text.slice(0, 45)} ` : text;
+    }
+  };
+
+  return (
+    <div className="ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-44">
+      <h1 className="mt-6 mb-12  text-5xl text-white font-medium sm:text-3xl sm:font-medium md:text-3xl md:font-bold lg:text-5xl lg:font-bold">
+        Public Review & Rating
+      </h1>
+
+      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full xl:w-[62%] rounded-md">
+        <div className="flex flex-col gap-0 sm:gap-6  md:gap-40 lg:gap-40 sm:flex-row md:flex-row lg:flex-row">
+        <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
+          <div className="">
+          <p className="mb-0 text-lime-400  mr-0 sm:mb-1 lg:mb-1 xl:mb-1 sm:leading-5 lg:leading-5 xl:leading-5">
+            Average Rating: 4.5 Stars
+          </p>
+        <p className="font-normal mb-0 text-sm text-white">200 Reviews</p>
+          </div>
+        </div>
+        
+          <div className="flex">
+            {ratings.map((elem, ind) => (
+              <div  className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl">{elem}</div>
+            ))}
+          </div>
+          </div>
+      </div>
+
+      <>
+        {reviews.map(
+          (review, index) => (
+            console.log(review.text.length),
+            (
+              <div className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[62%]">
+                <div key={index} className="flex flex-col gap-0  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-6  md:gap-64 lg:gap-64">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex flex-row">
+                      <Avatar>
+                        <AvatarImage
+                          src={review.avatarSrc}
+                          alt={`@${review.name}`}
+                        />
+                        <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                      <p
+                        className="text-center w-2 text-white"
+                        onClick={toggleNameDisplay}
+                      >
+                        {" "}
+                        {getDisplayName(review.name)}
+                      </p>
+                    </div>
+                    <p className="text-white">{review.date}</p>
+                  </div>
+                  <div className="flex flex-col gap-3 w-56  ">
+                    <span className="flex">
+                      {review.rating.map((elem, ind) => (
+                        <div className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl">
+                          {elem}
+                        </div>
+                      ))}
+                    </span>
+                    <p className={`h-auto ${readMore ? 'max-h-none' : 'h-2'} w-52 text-white`}  onClick={toggleReadDisplay}>
+                      
+                      {getReadMore(review.text)}
+                      {review.text.length > 45 && !readMore ?(
+                        <span className="cursor-pointer text-blue-500">Read More</span>
+                      ):(
+                         <span></span>
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )
+          )
+        )}
+      </>
+
+      {/*RATING FORM */}
+
+      <div className="bg-[rgba(30,41,59,0.5)] py-4  pl-6 pr-6 pb-8 pt-8  mt-4 w-full xl:w-[62%] ">
+        <h1 className=" text-white text-3xl font-semibold tracking-tight mb-4  sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl sm:font-semibold md:font-extrabold lg:font-extrabold xl:font-extrabold">
+          Rate Us
+        </h1>
+
+        <p className=" text-gray-400 text-sm sm:text-sm lg:text-base xl:text-base">
+          Your Input is super Important in helping us understand your needs
+          better, so we can customize our services to suit you perfectly{" "}
+        </p>
+
+        <h1 className="text-white text-2xl font-semibold tracking-tight mt-4 sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl sm:font-semibold md:font-bold lg:font-sans xl:font-bold" >
+          How Would your Rate our course?
+        </h1>
+
+        <div className="flex mt-4  gap-[5px] sm:gap-2 md:gap-4 lg:gap-4 xl:gap-4 ">
+          {emptyStars.map((elem, ind) => (
+            <div
+              key={ind}
+              className="text-yellow-200 flex p-2 sm:p-4 md:p-4 lg:p-6 xl:p-6  rounded-full	 border-solid	border-2 border-gray-600 relative hover:bg-gray-500  text-lg md:text-2xl sm:text-xl lg:text-3xl xl:text-3xl"
+            >
+              {elem}
+            </div>
+          ))}
+        </div>
+        <textarea
+          name=""
+          id=""
+          className="mt-4  text-white bg-black w-full rounded-md p-4"
+          rows={8}
+          cols={4}
+          placeholder="Enter Your review here"
+        ></textarea>
+
+        <button className="bg-blue-500 h-12 w-full rounded-md	flex items-center justify-center font-semibold mb-2 mt-4 ml-0">
+          Submit
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PublicRating;
