@@ -206,7 +206,7 @@
       
               <div className="flex gap-4 ml-0 mr-0 mt-2 pr-0 pl-0 w-full xl:w-[62%] overflow-x-auto ">
               {course.lessons.map((lesson,lessonIndex) => (
-                <div className="flex shrink-0	w-64 h-auto mb-2">
+                <div className="flex shrink-0	w-64 h-auto mb-2" key={lessonIndex}>
                   <article
                     key={lessonIndex}
                     className=" bg-[rgba(29,26,39,1)] border border-solid border-gray-300  rounded-md flex flex-col gap-2 h-full  p-4"
@@ -242,7 +242,7 @@
               <div className="flex gap-4 ml-0 mb-2 mt-2 pr-0 pl-0 w-full xl:w-[62%] overflow-x-auto ">
               {course.lessons.map((lesson,lessonIndex) => (
                 // console.log("ceck length",lesson.description.length),
-                <div className="flex shrink-0	w-64 h-auto mb-2">
+                <div className="flex shrink-0	w-64 h-auto mb-2" key={lessonIndex}>
                   <article
                     key={lessonIndex}
                     className=" bg-[rgba(29,26,39,1)] border border-solid border-gray-300  rounded-md flex flex-col gap-2 h-full  p-4"

@@ -111,8 +111,8 @@ const PublicRating = () => {
           (review, index) => (
             console.log(review.text.length),
             (
-              <div className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[62%]">
-                <div key={index} className="flex flex-col gap-0  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-6  md:gap-64 lg:gap-64">
+              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[62%]">
+                <div  className="flex flex-col gap-0  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-6  md:gap-64 lg:gap-64">
                   <div className="flex flex-col gap-3">
                     <div className="flex flex-row">
                       <Avatar>
