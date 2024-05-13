@@ -23,7 +23,7 @@ import { FaStarHalfStroke } from "react-icons/fa6";
 const HeroSection = () => {
 
 
-const ratings = [<FaStar />,<FaStar />,<FaStar />,<FaStarHalfStroke/>,<FaRegStar/>]
+const ratings = [<FaStar key={1} />,<FaStar key={2} />,<FaStar key={3} />,<FaStarHalfStroke key={4}/>,<FaRegStar key={5}/>]
 // console.log(ratings)
 return (
     <div className="relative flex flex-col justify-center bg-gradient-to-b from-blue-950 to-black sm:flex-col md:flex-row lg:flex-row ">

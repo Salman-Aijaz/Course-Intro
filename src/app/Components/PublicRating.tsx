@@ -8,26 +8,26 @@ import { FaStarHalfStroke } from "react-icons/fa6";
 
 const PublicRating = () => {
   const ratings = [
-    <FaStar />,
-    <FaStar />,
-    <FaStar />,
-    <FaStarHalfStroke />,
-    <FaRegStar />,
+    <FaStar  key={1}/>,
+    <FaStar key={2}/>,
+    <FaStar key={3}/>,
+    <FaStarHalfStroke key={4} />,
+    <FaRegStar key={5}/>,
   ];
   const fullRatings = [
-    <FaStar />,
-    <FaStar />,
-    <FaStar />,
-    <FaStar />,
-    <FaStarHalfStroke />,
+    <FaStar key={1}/>,
+    <FaStar key={2}/>,
+    <FaStar key={3}/>,
+    <FaStar key={4}/>,
+    <FaStarHalfStroke  key={5}/>,
   ];
 
   const emptyStars = [
-    <FaRegStar />,
-    <FaRegStar />,
-    <FaRegStar />,
-    <FaRegStar />,
-    <FaRegStar />,
+    <FaRegStar  key={1}/>,
+    <FaRegStar key={2}/>,
+    <FaRegStar key={3}/>,
+    <FaRegStar key={4}/>,
+    <FaRegStar key={5}/>,
   ];
   
   const reviews = [
