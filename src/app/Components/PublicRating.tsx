@@ -82,12 +82,12 @@ const PublicRating = () => {
   };
 
   return (
-    <div className="ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-44">
+    <div className="ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-[308px]" id="rating">
       <h1 className="mt-6 mb-12  text-5xl text-white font-medium sm:text-3xl sm:font-medium md:text-3xl md:font-bold lg:text-5xl lg:font-bold">
         Public Review & Rating
       </h1>
 
-      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full xl:w-[62%] rounded-md">
+      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full xl:w-[69%] rounded-md">
         <div className="flex flex-col gap-0 sm:gap-6  md:gap-40 lg:gap-40 sm:flex-row md:flex-row lg:flex-row">
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
           <div className="">
@@ -112,7 +112,7 @@ const PublicRating = () => {
             console.log("INDEX",index),
             console.log(review.text.length),
             (
-              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[62%]">
+              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[69%]">
                 <div  className="flex flex-col gap-0  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-6  md:gap-64 lg:gap-64">
                   <div className="flex flex-col gap-3">
                     <div className="flex flex-row">
@@ -160,7 +160,7 @@ const PublicRating = () => {
 
       {/*RATING FORM */}
 
-      <div className="bg-[rgba(30,41,59,0.5)] py-4  pl-6 pr-6 pb-8 pt-8  mt-4 w-full xl:w-[62%] ">
+      <div className="bg-[rgba(30,41,59,0.5)] py-4  pl-6 pr-6 pb-8 pt-8  mt-4 w-full xl:w-[69%] ">
         <h1 className=" text-white text-3xl font-semibold tracking-tight mb-4  sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl sm:font-semibold md:font-extrabold lg:font-extrabold xl:font-extrabold">
           Rate Us
         </h1>

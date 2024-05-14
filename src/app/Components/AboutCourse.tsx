@@ -1,10 +1,13 @@
 import React from 'react'
+import Layout from './Layout'
+import Navbar from './Navbar'
 
 const AboutCourse = () => {
   return (
     <>
-    <div className='border-b-2 border-slate-800'>
-        <div className='ml-0 mr-0 mt-2 pr-4 pl-4 md:ml-0 lg:ml-44 xl:ml-44 md:mr-6 lg:mr-96 xl:mr-[500px]'>
+<Navbar/>    
+    <div className='border-b-2 border-slate-800' id='AboutCourse'>
+        <div className='ml-0 mr-0 mt-2 pr-4 pl-4 md:ml-0  lg:ml-[320px] md:mr-6 lg:mr-6 xl:mr-[520px]'>
      <h1 className='text-white mt-6 mb-6 leading-7 text-3xl font-bold md:text-3xl lg:text-3xl md:mb-12 lg:mb-12'>About This Course</h1>
      <p className='text-white'>
      A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it.

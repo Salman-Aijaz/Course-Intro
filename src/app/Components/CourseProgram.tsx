@@ -187,24 +187,24 @@
     }
 
     return (
-      <div className="border-b-2 border-slate-800 pb-2">
-        <h1 className="mt-6 mb-12 ml-0 leading-7 text-3xl text-white font-bold sm:ml-0 md:ml-0 lg:ml-48 sm:text-3xl md:text-5xl lg:text-5xl">
+      <div id="course" className="border-b-2 border-slate-800 pb-2  ">
+        <h1 className="mt-6 mb-12 ml-0 leading-7 text-3xl text-white font-bold sm:ml-0 md:ml-0 lg:ml-[320px] sm:text-3xl md:text-5xl lg:text-5xl">
           Course In This Program
         </h1>
         {!showCourse &&
           courses.slice(0, 3).map((course, index) => (
             <div
               key={index}
-              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-48 "
+              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-[320px] "
             >
-              <div className="bg-[rgba(24,24,27,1)] py-4 px-4 w-full  xl:w-[62%] rounded-md ">
+              <div className="bg-[rgba(24,24,27,1)] py-4 px-4 w-full  xl:w-[69%] rounded-md ">
                 <p className="mb-1 text-[#2cbca5] leading-5">
                   Course {index + 1}: {course.title}
                 </p>
                 <h1 className="font-normal mb-0 text-2xl text-white mt-5">{course.title}</h1>
               </div>
       
-              <div className="flex gap-4 ml-0 mr-0 mt-2 pr-0 pl-0 w-full xl:w-[62%] overflow-x-auto ">
+              <div className="flex gap-4 ml-0 mr-0 mt-2 pr-0 pl-0 w-full xl:w-[70%] overflow-x-auto ">
               {course.lessons.map((lesson,lessonIndex) => (
                 <div key={lessonIndex} className="flex shrink-0	w-64 h-auto mb-2" >
                   <article
@@ -214,7 +214,7 @@
                       <FaBookOpen className="h-8 w-8 flex-shrink-0"/>
                       <p className=" leading-3 text-sm text-white">{lesson.chapter}</p>
                     </div>
-                    <h4 className="text-white h-8 font-semibold">{lesson.title}</h4>
+                    <h4 className="text-white  font-semibold">{lesson.title}</h4>
                    <div className="flex flex-col gap-1">
                     <p className=" text-sm text-white">{lesson.description}</p>
                    </div>
@@ -229,16 +229,16 @@
           courses.map((course, index) => (
             <div
               key={index}
-              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-48 "
+              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-[320px] "
             >
-              <div className="bg-[rgba(24,24,27,1)] py-4 px-4 w-full xl:w-[62%] rounded-md ">
+              <div className="bg-[rgba(24,24,27,1)] py-4 px-4 w-full xl:w-[69%] rounded-md ">
                 <p className="mb-1 text-[#2cbca5] leading-5">
                   Course {index + 1}: {course.title}
                 </p>
                 <h1 className="font-normal mb-0 text-2xl text-white mt-5">{course.title}</h1>
               </div>
       
-              <div className="flex gap-4 ml-0 mb-2 mt-2 pr-0 pl-0 w-full xl:w-[62%] overflow-x-auto ">
+              <div className="flex gap-4 ml-0 mb-2 mt-2 pr-0 pl-0 w-full xl:w-[70%] overflow-x-auto ">
               {course.lessons.map((lesson,lessonIndex) => (
                 // console.log("ceck length",lesson.description.length),
                 <div key={lessonIndex} className="flex shrink-0	w-64 h-auto mb-2" >
@@ -249,7 +249,7 @@
                       <FaBookOpen className="h-8 w-8 flex-shrink-0"/>
                       <p className=" leading-3 text-sm text-white">{lesson.chapter}</p>
                     </div>
-                    <h4 className="text-white h-8 font-semibold">{lesson.title}</h4>
+                    <h4 className="text-white  font-semibold">{lesson.title}</h4>
                    <div className="flex flex-col gap-1">
                     <p className="text-sm text-white">{lesson.description}</p>
                    </div>
@@ -263,14 +263,14 @@
         {!showCourse ? (
           <button
           onClick={triggerCourse}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-semibold mb-2 mt-4 ml-0 md:ml-0 lg:ml-48 xl:ml-48"
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-semibold mb-2 mt-4 ml-0 md:ml-0 xl:ml-[320px] lg:ml-[320px]"
           >
             Show More
           </button>
         ):(
           <button
-          onClick={triggerCourseLess}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-semibold mb-2 mt-4 ml-0 md:ml-0 lg:ml-48 xl:ml-48"
+          onClick={triggerCourse}
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-semibold mb-2 mt-4 ml-0 md:ml-0 xl:ml-[320px] lg:ml-[320px]"
           >
             Show Less
           </button>
