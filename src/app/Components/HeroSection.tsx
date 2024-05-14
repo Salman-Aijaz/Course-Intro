@@ -30,10 +30,10 @@ return (
       <div className="justify-between  pt-24 pb-30 flex flex-col">
         <div className="justify-center gap-4 pr-10 pl-10">
          
-          <h1 className="scroll-m-20 font-bold text-2xl   leading-10 text-white	 tracking-tight	mb-2  md:text-2xl md:mb-0 sm:mb-2 sm:text-2xl lg:text-3xl xl:text-3xl">
+          <h1 className="font-bold font-sans text-4xl  text-white">
             Crypto Trading Fundamental
           </h1>
-          <p className=" mb-2 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
+          <p className=" mt-2 mb-2 font-sans	 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
             Short Course
           </p>
 
@@ -45,12 +45,12 @@ return (
           ))}
          </div>
 
-          <p className=" text-sm leading-6 text-white    mb-2 md:mb-3 sm:mb-2 lg:mb-6 xl:mb-6 sm:text-sm lg:text-base xl:text-base">
+          <p className=" mt-2 mb-2 font-sans	 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
             In this program, you'll work with the Bitcoin and Ethereum
             protocols, build projects for real-world application, and gain the
             essential skills for a career in this dynamic space.
           </p>
-          <button className="  bg-blue-500   text-white px-4 py-2 rounded-md  ">
+          <button className="  bg-blue-500  font-sans text-white px-4 py-2 rounded-md  ">
             Enroll Now
           </button>
         </div>

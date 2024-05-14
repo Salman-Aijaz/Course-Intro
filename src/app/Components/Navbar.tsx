@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 const Navbar = () => {
   const router: any = useRouter();
@@ -31,7 +31,7 @@ const Navbar = () => {
     <div className="bg-[rgba(29,22,22,0.5)] border-b-[rgba(39,39,42)] border-solid border-b-[1px] z-50 top-0 sticky mt-[6px] pl-[20px] pr-[18px] w-full h-full sm:h-full md:h-full lg:h-full xl:h-full backdrop-blur-sm	">
       <div className="container  mx-auto px-[15px] flex   flex-col md:flex-col lg:flex-col xl:flex-col  md:items-start">
         <nav className="flex  ">
-          <div className="hidden sm:hidden  pt-4 pb-2 m-1 mr-[124px] lg:mr-1 xl:mr-1 sm:mr-[124px] md:mr[124px] md:flex lg:flex   md:flex-row lg:flex-row xl:flex-row text-white  text-lg font-normal box-border">
+          <div className="hidden sm:hidden font-medium text-sm font-sans text-[rgba(161,161,170,1)] pt-4 pb-2 m-1 mr-[124px] lg:mr-1 xl:mr-1 sm:mr-[124px] md:mr[124px] md:flex lg:flex   md:flex-row lg:flex-row xl:flex-row   box-border">
             <Link href="/" passHref>
               <div className="mr-[44px]">Home</div>
             </Link>
@@ -52,8 +52,8 @@ const Navbar = () => {
               className="text-white flex items-center justify-between w-full cursor-pointer focus:outline-none "
               onClick={handleToggleNavbar}
             >
-              <span className="text-lg ">{selectedItem}</span>
-              <IoMdArrowDropdown />
+              <span className="font-medium text-sm font-sans text-[rgba(161,161,170,1)] ">{selectedItem}</span>
+              {showNavbar ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
 
       {showNavbar && (
         <div className="md:hidden lg:hidden xl:hidden">
-          <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row text-white text-lg font-normal">
+          <div className="font-medium font-sans text-sm text-[rgba(161,161,170,1)] flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
             <Link href="/" passHref>
               <div
                 className="py-2 px-4"

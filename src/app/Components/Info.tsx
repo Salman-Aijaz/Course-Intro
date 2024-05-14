@@ -38,18 +38,18 @@ const Info = () => {
   
    <div className="flex   gap-[10px] leading-7 text-white mb-10 ml-16 sm:mb-10 sm:ml-4 sm:gap-[10px] md:gap-[10px] lg:gap-0 md:ml-16 lg:ml-[94px] xl:ml-[94px] md:mb-4 lg:mb-4 ">
       <BsFillCheckSquareFill  className="w-[100px] h-[30px] mt-[1px] sm:w-[70px]"/>
-      <p className="">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
+      <p className="font-sans	 text-white">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
     </div>
     
    <div className="flex flex-row  gap-[10px] leading-7 text-white mb-10 ml-16 sm:mb-10 sm:ml-4 sm:gap-[10px] md:gap-[10px] lg:gap-0 md:ml-16 lg:ml-[46px] xl:ml-[46px] md:mb-4 lg:mb-4 ">
       <BsFillCheckSquareFill  className="w-[100px] h-[30px] mt-[1px] sm:w-[70px]"/>
-      <p className="">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
+      <p className="font-sans	 text-white">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
     </div>
 
     
    <div className="flex flex-row  gap-[10px] leading-7 text-white mb-10 ml-16 sm:mb-10 sm:ml-4 sm:gap-[10px] md:gap-[10px] lg:gap-0 md:ml-16 lg:ml-[94px] xl:ml-[94px] md:mb-4 lg:mb-4 ">
       <BsFillCheckSquareFill className="w-[100px] h-[30px] mt-[1px] sm:w-[70px]"/>
-      <p className="">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
+      <p className="font-sans	 text-white">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
     </div>
   </div>
 
@@ -60,13 +60,13 @@ const Info = () => {
 
 
 <div className="bg-[rgba(30,41,59,0.5)] p-[30px] rounded-md  mt-4 w-[335px] min-h-auto md:min-h-auto lg:min-h-auto xl:min-h-auto">
-        <h3 className=" text-white text-2xl mb-4 font-bold">
+        <h1 className=" font-sans mb-4	 text-white text-lg md:text-xl font-semibold">
           Skill you will learn
-        </h3>
+        </h1>
        <div className="flex flex-wrap w-[335px]">
-        <span className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px] font-medium text-sm">Crypto Currency</span>
-        <span  className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px] font-medium text-sm">Blockchain</span>
-        <span  className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px] font-medium text-sm  ">Trading</span>
+        <span className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Crypto Currency</span>
+        <span  className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Blockchain</span>
+        <span  className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base  font-sans">Trading</span>
        </div>
       </div>
 

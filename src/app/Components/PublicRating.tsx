@@ -83,7 +83,7 @@ const PublicRating = () => {
 
   return (
     <div className="ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-[308px]" id="rating">
-      <h1 className="mt-6 mb-12  text-5xl text-white font-medium sm:text-3xl sm:font-medium md:text-3xl md:font-bold lg:text-5xl lg:font-bold">
+      <h1 className="mt-6 mb-8   font-sans text-4xl   font-bold text-white ">
         Public Review & Rating
       </h1>
 
@@ -91,10 +91,10 @@ const PublicRating = () => {
         <div className="flex flex-col gap-0 sm:gap-6  md:gap-40 lg:gap-40 sm:flex-row md:flex-row lg:flex-row">
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
           <div className="">
-          <p className="mb-0 text-lime-400  mr-0 sm:mb-1 lg:mb-1 xl:mb-1 sm:leading-5 lg:leading-5 xl:leading-5">
+          <p className="mb-0    text-[#2cbca5] leading-5 font-sans	 mr-0 sm:mb-1 lg:mb-1 xl:mb-1 ">
             Average Rating: 4.5 Stars
           </p>
-        <p className="font-normal mb-0 text-sm text-white">200 Reviews</p>
+        <p className=" mb-2 mt-2 font-sans	 text-white">200 Reviews</p>
           </div>
         </div>
         
@@ -109,13 +109,13 @@ const PublicRating = () => {
       <>
         {reviews.map(
           (review, index) => (
-            console.log("INDEX",index),
-            console.log(review.text.length),
+            // console.log("INDEX",index),
+            // console.log(review.text.length),
             (
               <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[69%]">
                 <div  className="flex flex-col gap-0  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-6  md:gap-64 lg:gap-64">
                   <div className="flex flex-col gap-3">
-                    <div className="flex flex-row">
+                    <div className="flex flex-row ">
                       <Avatar>
                         <AvatarImage
                           src={review.avatarSrc}
@@ -124,14 +124,14 @@ const PublicRating = () => {
                         <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <p
-                        className="text-center w-2 text-white"
+                        className="text-center font-sans w-2 text-white"
                         onClick={toggleNameDisplay}
                       >
                         {" "}
                         {getDisplayName(review.name)}
                       </p>
                     </div>
-                    <p className="text-white">{review.date}</p>
+                    <p className="text-white font-sans">{review.date}</p>
                   </div>
                   <div className="flex flex-col gap-3 w-56  ">
                     <span className="flex">
@@ -141,7 +141,7 @@ const PublicRating = () => {
                         </div>
                       ))}
                     </span>
-                    <p className={`h-auto ${readMore ? 'max-h-none' : 'h-2'} w-52 text-white`}  onClick={toggleReadDisplay}>
+                    <p className={`h-auto ${readMore ? 'max-h-none' : 'h-2'} w-52 text-white  font-sans`}  onClick={toggleReadDisplay}>
                       
                       {getReadMore(review.text)}
                       {review.text.length > 45 && !readMore ?(
@@ -161,18 +161,18 @@ const PublicRating = () => {
       {/*RATING FORM */}
 
       <div className="bg-[rgba(30,41,59,0.5)] py-4  pl-6 pr-6 pb-8 pt-8  mt-4 w-full xl:w-[69%] ">
-        <h1 className=" text-white text-3xl font-semibold tracking-tight mb-4  sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl sm:font-semibold md:font-extrabold lg:font-extrabold xl:font-extrabold">
+        <h1 className=" text-white  font-sans text-4xl   font-bold   mb-4 ">
           Rate Us
         </h1>
 
-        <p className=" text-gray-400 text-sm sm:text-sm lg:text-base xl:text-base">
+        <p className=" text-gray-500 font-sans text-xl">
           Your Input is super Important in helping us understand your needs
           better, so we can customize our services to suit you perfectly{" "}
         </p>
 
-        <h1 className="text-white text-2xl font-semibold tracking-tight mt-4 sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl sm:font-semibold md:font-bold lg:font-sans xl:font-bold" >
+        <h4 className=" mt-4 text-4xl tracking-tight font-bold text-white" >
           How Would your Rate our course?
-        </h1>
+        </h4>
 
         <div className="flex mt-4  gap-[5px] sm:gap-2 md:gap-4 lg:gap-4 xl:gap-4 ">
           {emptyStars.map((elem, ind) => (
@@ -194,7 +194,7 @@ const PublicRating = () => {
           placeholder="Enter Your review here"
         ></textarea>
 
-        <button className="bg-blue-500 h-12 w-full rounded-md	flex items-center justify-center font-semibold mb-2 mt-4 ml-0">
+        <button className="bg-blue-500 h-12 w-full rounded-md	flex items-center justify-center font-sans text-white mb-2 mt-4 ml-0">
           Submit
         </button>
       </div>
