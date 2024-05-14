@@ -4,8 +4,8 @@ import Navbar from './Navbar'
 
 const AboutCourse = () => {
   return (
-    <>
-<Navbar/>    
+    <>    
+    <Navbar/>
     <div className='border-b-2 border-slate-800' id='AboutCourse'>
         <div className='ml-0 mr-0 mt-2 pr-4 pl-4 md:ml-0  lg:ml-[320px] md:mr-6 lg:mr-6 xl:mr-[520px]'>
      <h1 className='text-white mt-6 mb-6 leading-7 text-3xl font-bold md:text-3xl lg:text-3xl md:mb-12 lg:mb-12'>About This Course</h1>
