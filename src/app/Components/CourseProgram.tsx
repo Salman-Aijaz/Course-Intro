@@ -184,7 +184,7 @@
     
 
     return (
-      <div id="course" className="border-b-2 border-slate-800 pb-2  ">
+      <div id="course" className="border-b-2 border-slate-800 pb-2 container  ">
         <h1 className="mt-6 mb-8 ml-0 leading-7 text-white font-sans text-4xl   font-bold  sm:ml-0 md:ml-0 lg:ml-[320px] ">
           Course In This Program
         </h1>
@@ -192,7 +192,7 @@
           courses.slice(0, 3).map((course, index) => (
             <div
               key={index}
-              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-[320px] "
+              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-[308px] xl:mr-[119px]  "
             >
               <div className="bg-[rgba(24,24,27,1)] py-4 px-4 w-full  xl:w-[69%] rounded-md ">
                 <p className="mb-1 text-[#2cbca5] leading-5 font-sans	 ">
@@ -260,14 +260,14 @@
         {!showCourse ? (
           <button
           onClick={triggerCourse}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0 md:ml-0 xl:ml-[320px] lg:ml-[320px] text-white"
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0 md:ml-0 xl:ml-[320px] lg:ml-0 text-white"
           >
             Show More
           </button>
         ):(
           <button
           onClick={triggerCourse}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0 md:ml-0 xl:ml-[320px] lg:ml-[320px] text-white"
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0 md:ml-0  lg:ml-0 xl:ml-[320px] text-white"
           >
             Show Less
           </button>
