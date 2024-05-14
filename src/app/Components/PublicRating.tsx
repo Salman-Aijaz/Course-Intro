@@ -82,12 +82,12 @@ const PublicRating = () => {
   };
 
   return (
-    <div className=" container ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-[308px]" id="rating">
+    <div className="  ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-[300px]" id="rating">
       <h1 className="mt-6 mb-8   font-sans text-4xl   font-bold text-white ">
         Public Review & Rating
       </h1>
 
-      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full xl:w-[45%] rounded-md">
+      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full xl:w-[69%]  rounded-md">
         <div className="flex flex-col gap-0 sm:gap-6  md:gap-40 lg:gap-40 sm:flex-row md:flex-row lg:flex-row">
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
           <div className="">
@@ -112,7 +112,7 @@ const PublicRating = () => {
             // console.log("INDEX",index),
             // console.log(review.text.length),
             (
-              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[45%]">
+              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[69%]">
                 <div  className="flex flex-col gap-6  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-[7rem]  md:gap-64 lg:gap-64">
                   <div className="flex flex-col gap-3">
                     <div className="flex flex-row ">
@@ -131,7 +131,7 @@ const PublicRating = () => {
                         {getDisplayName(review.name)}
                       </p>
                     </div>
-                    <p className="text-white font-sans w-full xl:w-[55px]">{review.date}</p>
+                    <p className="text-white font-sans">{review.date}</p>
                   </div>
                   <div className="flex flex-col gap-3 w-56  ">
                     <span className="flex">
@@ -160,7 +160,7 @@ const PublicRating = () => {
 
       {/*RATING FORM */}
 
-      <div className="bg-[rgba(30,41,59,0.5)] py-4  pl-6 pr-6 pb-8 pt-8  mt-4 w-full  xl:w-[45%] ">
+      <div className="bg-[rgba(30,41,59,0.5)] py-4  pl-6 pr-6 pb-8 pt-8  mt-4 w-full xl:w-[69%] ">
         <h1 className=" text-white  font-sans text-4xl   font-bold   mb-4 ">
           Rate Us
         </h1>

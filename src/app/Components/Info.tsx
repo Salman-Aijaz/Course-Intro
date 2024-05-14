@@ -11,24 +11,24 @@ const Info = () => {
   return (
     <>
       <div  className="justify-center flex ml-auto mr-auto max-w-7xl pl-4 pr-4 md:pl-4 lg:pl-6: xl:pl-6 lg:pr-6 xl:pr-6 sm:pr-4 md:mt-2 mt-2">
-        <div className="flex flex-wrap items-center justify-center gap-x-6 px-2 bg-white rounded-lg shadow-lg text-slate-500 pt-8 pb-7">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 px-2 bg-[#ffffff1b] rounded-lg shadow-lg text-slate-500 pt-8 pb-7">
           <div className="flex flex-col items-center justify-center mx-4">
             <div>
-              <IoIosClock style={{width:"40px",height:"32px"}}  />
+              <IoIosClock style={{width:"40px",height:"32px",color:"white"}}  />
             </div>
-            <p>6 Hours per Week</p>
+            <p className="font-sans	 text-white">6 Hours per Week</p>
           </div>
           <div className="flex flex-col items-center justify-center mx-4">
             <div>
-              <GiAchievement style={{width:"40px",height:"32px"}}/>
+              <GiAchievement style={{width:"40px",height:"32px",color:"white"}}/>
             </div>
-            <p>Do Challenges</p>
+            <p className="font-sans	 text-white">Do Challenges</p>
           </div>
           <div className="flex flex-col items-center justify-center mx-4">
             <div>
-              <PiCertificateFill style={{width:"40px",height:"32px"}}/>
+              <PiCertificateFill style={{width:"40px",height:"32px",color:"white"}}/>
             </div>
-            <p>Get Certificate</p>
+            <p className="font-sans	 text-white">Get Certificate</p>
           </div>
         </div>
       </div>
@@ -64,9 +64,9 @@ const Info = () => {
           Skill you will learn
         </h1>
        <div className="flex flex-wrap w-[335px]">
-        <span className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Crypto Currency</span>
-        <span  className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Blockchain</span>
-        <span  className="bg-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base  font-sans">Trading</span>
+        <span className="border-[rgba(115,83,229,1)]  border-[3px]  text-white rounded-[40px] px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Crypto Currency</span>
+        <span  className="border-[rgba(115,83,229,1)]  border-[3px]  text-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Blockchain</span>
+        <span  className="border-[rgba(115,83,229,1)]  border-[3px]  text-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base  font-sans">Trading</span>
        </div>
       </div>
 
