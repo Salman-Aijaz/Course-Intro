@@ -26,18 +26,17 @@ const HeroSection = () => {
 const ratings = [<FaStar key={1} />,<FaStar key={2} />,<FaStar key={3} />,<FaStarHalfStroke key={4}/>,<FaRegStar key={5}/>]
 // console.log(ratings)
 return (
-    <div className="relative flex flex-col justify-center bg-gradient-to-b from-blue-950 to-black sm:flex-col md:flex-row lg:flex-row ">
-      <div className="justify-between  pt-24 pb-30 flex flex-col">
-        <div className="justify-center gap-4 pr-10 pl-10">
-         
-          <h1 className="font-bold font-sans text-4xl  text-white">
+    <div className=" flex flex-col max-lg:items-center max-sm:text-center lg:justify-center w-full bg-gradient-to-b  from-[rgba(24,56,129,1)] to-black sm:flex-col md:flex-row lg:flex-row  lg:py-20">
+        <div className="py-20 px-10">
+
+          <h1 className="font-bold font-sans text-4xl mt-8  text-white">
             Crypto Trading Fundamental
           </h1>
-          <p className=" mt-2 mb-2 font-sans	 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
+          <p className=" mt-2 mb-2 font-sans text-base	 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
             Short Course
           </p>
 
-         <div className=" bottom-4 right-4  flex mb-2 md:mb-2 sm:mb-2 lg:mb-6xl:mb-6">
+         <div className=" bottom-4 right-4  flex justify-center sm:justify-start md:justify-start lg:justify-start xl:justify-start mb-2 md:mb-2 sm:mb-2 lg:mb-6">
           {ratings.map((elem,ind)=>(
            <div key={ind} className="text-yellow-300 text-xl md:text-2xl sm:text-xl lg:text-3xl xl:text-3xl">
            {elem}
@@ -45,19 +44,19 @@ return (
           ))}
          </div>
 
-          <p className=" mt-2 mb-2 font-sans	 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
+          <p className=" mt-2 mb-2 font-sans text-base	 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
             In this program, you'll work with the Bitcoin and Ethereum
             protocols, build projects for real-world application, and gain the
             essential skills for a career in this dynamic space.
           </p>
-          <button className="  bg-blue-500  font-sans text-white px-4 py-2 rounded-md  ">
+          <button className="  bg-blue-500  font-sans text-base text-white px-4 py-2 rounded-md  ">
             Enroll Now
           </button>
         </div>
-      </div>
+      
 
-      <div className="flex items-center pt-4 pb-30 pr-10 pl-10 sm:pt-4 md:pt-24 lg:pt-24 xl:pt-24">
-        <Image src={bitImage} alt="ok" width={980} height={300}  className=""/>
+      <div className="flex flex-col  items-center  px-10">
+        <Image src={bitImage} alt="ok" width={900} height={200}  className=""/>
       </div>  
 
     </div>

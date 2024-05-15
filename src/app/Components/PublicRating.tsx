@@ -84,11 +84,14 @@ const PublicRating = () => {
   };
 
   return (
-    <div className="  ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-0 xl:ml-[300px]" id="rating">
+  <>
+<div className="container flex justify-center items-center ">
+    <div className="  ml-0 mr-0 mt-2 pr-0 pl-0 rounded-xl  sm:ml-0 md:ml-0  lg:ml-0 xl:ml-0 max-w-screen-xl w-full " id="rating">
+      
       <h1 className="mt-6 mb-8   font-sans text-4xl   font-bold text-white ">
         Public Review & Rating
       </h1>
-      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full xl:w-[69%]  rounded-md">
+      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full rounded-md">
         <div className="flex flex-col gap-0 sm:gap-6  md:gap-40 lg:gap-40 sm:flex-row md:flex-row lg:flex-row">
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
           <div className="">
@@ -113,7 +116,7 @@ const PublicRating = () => {
             // console.log("INDEX",index),
             // console.log(review.text.length),
             (
-              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  xl:w-[69%]">
+              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  ">
                 <div  className="flex flex-col gap-6  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-[7rem]  md:gap-64 lg:gap-64">
                   <div className="flex flex-col gap-3">
                     <div className="flex flex-row ">
@@ -159,14 +162,21 @@ const PublicRating = () => {
         )}
       </>
 
-      {/*RATING FORM */}
+    
+      
+    </div>
+    </div>
 
-      <div className="bg-[rgba(30,41,59,0.5)] py-4  pl-6 pr-6 pb-8 pt-8  mt-4 w-full xl:w-[69%] ">
+  {/*RATING FORM */}
+
+  <div className="container flex justify-center items-center "> 
+
+<div className="bg-[rgba(30,41,59,0.5)] py-6   mt-4 max-w-screen-md container mb-4  ">
         <h1 className=" text-white  font-sans text-4xl   font-bold   mb-4 ">
           Rate Us
         </h1>
 
-        <p className=" text-gray-500 font-sans text-xl">
+        <p className=" text-gray-500 font-sans text-base font-semibold">
           Your Input is super Important in helping us understand your needs
           better, so we can customize our services to suit you perfectly{" "}
         </p>
@@ -180,7 +190,7 @@ const PublicRating = () => {
             // console.log("INDEX of empty star",ind),
             <div
               key={ind}
-              className="text-yellow-200 flex p-2 sm:p-4 md:p-4 lg:p-6 xl:p-6  rounded-full	 border-solid	border-2 border-gray-600 relative hover:bg-gray-500  text-lg md:text-2xl sm:text-xl lg:text-3xl xl:text-3xl"
+              className="text-yellow-200 flex p-2 sm:p-4 md:p-4 lg:p-5 xl:p-5  rounded-full	 border-solid	border-2 border-gray-600 relative hover:bg-gray-500  text-xl "
             >
               {elem}
             </div>
@@ -199,7 +209,8 @@ const PublicRating = () => {
           Submit
         </button>
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 

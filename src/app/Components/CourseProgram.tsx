@@ -174,8 +174,8 @@
     
 
     return ( 
-      <div id="course" className="border-b-2 border-slate-800">     
-      <div  className=" pb-2 ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-0 xl:ml-[300px]">
+      <div className="container flex justify-center items-center ">     
+      <div id="course" className="max-w-screen-xl w-full ">
         <h1 className="mt-6 mb-8 ml-0 leading-7 text-white font-sans text-4xl   font-bold  sm:ml-0 md:ml-0 lg:ml-0 ">
           Course In This Program
         </h1>
@@ -185,14 +185,14 @@
               key={index}
               className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-0 "
             >
-              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full  xl:w-[70%] rounded-md ">
+              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full   rounded-md ">
                 <p className="mb-1 text-[#2cbca5] leading-5 font-sans	 ">
                   Course {index + 1}: {course.title}
                 </p>
                 <h1 className=" mb-0 leading-7 text-white font-sans text-3xl   font-bold  mt-5">{course.title}</h1>
               </div>
       
-              <div className="flex gap-4 ml-0 mr-0 mt-2 pr-0 pl-0 w-full xl:w-[70%] overflow-x-auto ">
+              <div className="flex gap-4 ml-0 mr-0 mt-2 pr-0 pl-0 w-full  overflow-x-auto ">
               {course.lessons.map((lesson,lessonIndex) => (
                 <div key={lessonIndex} className="flex shrink-0	w-64 h-auto mb-2" >
                   <article
@@ -200,7 +200,7 @@
                   >
                     <div className="flex items-center gap-2 h-8">
                       <FaBookOpen className="h-[46px] w-[46px] flex-shrink-0"/>
-                      <h1 className=" leading-3 font-sans		text-2xl text-white">{lesson.chapter}</h1>
+                      <h1 className=" leading-3 font-sans		text-base text-white">{lesson.chapter}</h1>
                     </div>
                     <h4 className="text-white  text-xl  font-sans mt-4">{lesson.title}</h4>
                    <div className="flex flex-col gap-1">
@@ -217,16 +217,16 @@
           courses.map((course, index) => (
             <div
               key={index}
-              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-0 xl:ml-0 "
+              className="ml-0 mr-0 mt-6 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-0 xl:ml-0 "
             >
-              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full xl:w-[70%] rounded-md ">
+              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full rounded-md ">
                 <p className="mb-1 text-[#2cbca5] leading-5">
                   Course {index + 1}: {course.title}
                 </p>
                 <h1 className="mb-0 leading-7 text-white font-sans text-3xl   font-bold  mt-5">{course.title}</h1>
               </div>
       
-              <div className="flex gap-4 ml-0 mb-2 mt-2 pr-0 pl-0 w-full xl:w-[70%] overflow-x-auto ">
+              <div className="flex gap-4 ml-0 mb-2 mt-2 pr-0 pl-0 w-full  overflow-x-auto ">
               {course.lessons.map((lesson,lessonIndex) => (
                 // console.log("ceck length",lesson.description.length),
                 <div key={lessonIndex} className="flex shrink-0	w-64 h-auto mb-2" >
@@ -235,7 +235,7 @@
                   >
                     <div className="flex items-center gap-2 h-8">
                       <FaBookOpen className="h-[46px] w-[46px] flex-shrink-0"/>
-                      <p className=" leading-3 font-sans	text-xl text-white">{lesson.chapter}</p>
+                      <p className=" leading-3 font-sans	text-base text-white">{lesson.chapter}</p>
                     </div>  
                     <h4 className="text-white  text-xl  font-sans mt-4">{lesson.title}</h4>
                    <div className="flex flex-col gap-1">
@@ -251,14 +251,14 @@
         {!showCourse ? (
           <button
           onClick={triggerCourse}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0  text-white"
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4  text-white"
           >
             Show More
           </button>
         ):(
           <button
           onClick={triggerCourse}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0  text-white"
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4  text-white"
           >
             Show Less
           </button>
