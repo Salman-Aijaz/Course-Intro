@@ -36,19 +36,19 @@ const Info = () => {
 <div className="pt-12 pb-0 flex justify-center ">
   <div className="max-w-7xl  ml-auto mr-auto pl-2 pr-6 flex flex-col   justify-center md:pl-2 sm:flex-col md:flex md:flex-row lg:flex lg:flex-row lg:pl-6 ">
   
-   <div className="flex   gap-[10px] leading-7 text-white mb-10 ml-16 sm:mb-10 sm:ml-4 sm:gap-[10px] md:gap-[10px] lg:gap-0 md:ml-16 lg:ml-[94px] xl:ml-[94px] md:mb-4 lg:mb-4 ">
-      <BsFillCheckSquareFill  className="w-[100px] h-[30px] mt-[1px] sm:w-[70px]"/>
+   <div className="flex   gap-[10px] leading-7 text-white mb-10 ml-6 sm:mb-10 sm:ml-4  md:ml-16 lg:ml-[94px] xl:ml-[94px] md:mb-4 lg:mb-4 ">
+      <BsFillCheckSquareFill  className="w-[100px] h-[30px] mt-[7px] sm:w-[70px]"/>
       <p className="font-sans	 text-white">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
     </div>
     
-   <div className="flex flex-row  gap-[10px] leading-7 text-white mb-10 ml-16 sm:mb-10 sm:ml-4 sm:gap-[10px] md:gap-[10px] lg:gap-0 md:ml-16 lg:ml-[46px] xl:ml-[46px] md:mb-4 lg:mb-4 ">
-      <BsFillCheckSquareFill  className="w-[100px] h-[30px] mt-[1px] sm:w-[70px]"/>
+   <div className="flex flex-row  gap-[10px] leading-7 text-white mb-10 ml-6 sm:mb-10 sm:ml-4  md:ml-16 lg:ml-[46px] xl:ml-[46px] md:mb-4 lg:mb-4 ">
+      <BsFillCheckSquareFill  className="w-[100px] h-[30px] mt-[7px] sm:w-[70px]"/>
       <p className="font-sans	 text-white">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
     </div>
 
     
-   <div className="flex flex-row  gap-[10px] leading-7 text-white mb-10 ml-16 sm:mb-10 sm:ml-4 sm:gap-[10px] md:gap-[10px] lg:gap-0 md:ml-16 lg:ml-[94px] xl:ml-[94px] md:mb-4 lg:mb-4 ">
-      <BsFillCheckSquareFill className="w-[100px] h-[30px] mt-[1px] sm:w-[70px]"/>
+   <div className="flex flex-row  gap-[10px] leading-7 text-white mb-10 ml-6 sm:mb-10 sm:ml-4  md:ml-16 lg:ml-[94px] xl:ml-[94px] md:mb-4 lg:mb-4 ">
+      <BsFillCheckSquareFill className="w-[100px] h-[30px] mt-[7px] sm:w-[70px]"/>
       <p className="font-sans	 text-white">Learn Crypto Trading and do challenges every day to upgrade your skill</p>
     </div>
   </div>
@@ -64,9 +64,9 @@ const Info = () => {
           Skill you will learn
         </h1>
        <div className="flex flex-wrap w-[335px]">
-        <span className="border-[rgba(115,83,229,1)]  border-[3px]  text-white rounded-[40px] px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Crypto Currency</span>
-        <span  className="border-[rgba(115,83,229,1)]  border-[3px]  text-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Blockchain</span>
-        <span  className="border-[rgba(115,83,229,1)]  border-[3px]  text-white rounded-full px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base  font-sans">Trading</span>
+        <span className="border-white  border-[3px]  text-white rounded-sm px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Crypto Currency</span>
+        <span  className="border-white  border-[3px]  text-white rounded-sm px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base font-sans">Blockchain</span>
+        <span  className="border-white  border-[3px]  text-white rounded-sm px-[16px] py-[8px] mr-[14px] mb-[12px]  text-sm md:text-base  font-sans">Trading</span>
        </div>
       </div>
 

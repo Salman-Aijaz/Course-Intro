@@ -1,8 +1,6 @@
   "use client";
   import Image from "next/image";
   import React, { useState } from "react";
-  import lessonImage from "../assets/Lesson.png";
-  import Slider from "react-slick";
   import "slick-carousel/slick/slick.css";
   import "slick-carousel/slick/slick-theme.css";
   import { FaBookOpen } from "react-icons/fa6";
@@ -168,14 +166,6 @@
       },
     ];
 
-    const settings = {
-      dots: false,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      useCSS:true
-    };
 
     const triggerCourse = () => {
       setShowCourse(!showCourse);
@@ -183,18 +173,19 @@
 
     
 
-    return (
-      <div id="course" className="border-b-2 border-slate-800 pb-2 ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-[300px] ">
-        <h1 className="mt-6 mb-8 ml-0 leading-7 text-white font-sans text-4xl   font-bold  sm:ml-0 md:ml-0 lg:ml-[320px] ">
+    return ( 
+      <div id="course" className="border-b-2 border-slate-800">     
+      <div  className=" pb-2 ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-0 xl:ml-[300px]">
+        <h1 className="mt-6 mb-8 ml-0 leading-7 text-white font-sans text-4xl   font-bold  sm:ml-0 md:ml-0 lg:ml-0 ">
           Course In This Program
         </h1>
         {!showCourse &&
           courses.slice(0, 3).map((course, index) => (
             <div
               key={index}
-              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-[320px] "
+              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-0 "
             >
-              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full  xl:w-[69%] rounded-md ">
+              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full  xl:w-[70%] rounded-md ">
                 <p className="mb-1 text-[#2cbca5] leading-5 font-sans	 ">
                   Course {index + 1}: {course.title}
                 </p>
@@ -226,9 +217,9 @@
           courses.map((course, index) => (
             <div
               key={index}
-              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-[320px] "
+              className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-0 xl:ml-0 "
             >
-              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full xl:w-[69%] rounded-md ">
+              <div className="bg-[rgba(17,24,39,1)] py-4 px-4 w-full xl:w-[70%] rounded-md ">
                 <p className="mb-1 text-[#2cbca5] leading-5">
                   Course {index + 1}: {course.title}
                 </p>
@@ -260,18 +251,19 @@
         {!showCourse ? (
           <button
           onClick={triggerCourse}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0 md:ml-0 xl:ml-[320px] lg:ml-[320px] text-white"
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0  text-white"
           >
             Show More
           </button>
         ):(
           <button
           onClick={triggerCourse}
-            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0 md:ml-0 xl:ml-[320px] lg:ml-[320px] text-white"
+            className="bg-blue-500 h-12 w-40 rounded-md	flex items-center justify-center font-sans mb-2 mt-4 ml-0  text-white"
           >
             Show Less
           </button>
         )}
+      </div>
       </div>
     );
   };

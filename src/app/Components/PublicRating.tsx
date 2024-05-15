@@ -5,6 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import thoughts from "../assets/pngwing.com.png";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { FaStarHalfStroke } from "react-icons/fa6";
+import { IoIosSearch } from "react-icons/io";
+
 
 const PublicRating = () => {
   const ratings = [
@@ -82,11 +84,10 @@ const PublicRating = () => {
   };
 
   return (
-    <div className="  ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-[300px]" id="rating">
+    <div className="  ml-0 mr-0 mt-2 pr-4 pl-4 rounded-xl w-50 sm:ml-0 md:ml-0  lg:ml-0 xl:ml-[300px]" id="rating">
       <h1 className="mt-6 mb-8   font-sans text-4xl   font-bold text-white ">
         Public Review & Rating
       </h1>
-
       <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full xl:w-[69%]  rounded-md">
         <div className="flex flex-col gap-0 sm:gap-6  md:gap-40 lg:gap-40 sm:flex-row md:flex-row lg:flex-row">
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
