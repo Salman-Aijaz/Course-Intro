@@ -171,12 +171,12 @@ const PublicRating = () => {
 
   <div className="container flex justify-center items-center "> 
 
-<div className="bg-[rgba(30,41,59,0.5)] py-6   mt-4 max-w-screen-md container mb-4  ">
-        <h1 className=" text-white  font-sans text-4xl   font-bold   mb-4 ">
+<div className="bg-[rgba(30,41,59,0.5)] py-6   mt-4 max-w-screen-sm container mb-4  ">
+        <p className="   font-sans  text-2xl font-bold  text-zinc-300     mb-4 ">
           Rate Us
-        </h1>
+        </p>
 
-        <p className=" text-gray-500 font-sans text-base font-semibold">
+        <p className=" font-semibold text-zinc-500">
           Your Input is super Important in helping us understand your needs
           better, so we can customize our services to suit you perfectly{" "}
         </p>

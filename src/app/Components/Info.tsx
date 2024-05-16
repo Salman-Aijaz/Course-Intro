@@ -13,7 +13,7 @@ const Info = () => {
   return (
     <>
       <div  className="justify-center flex  max-w-7xl container  md:mt-2 mt-2">
-        <div className="flex flex-wrap items-center justify-center gap-x-6 px-2 bg-[#ffffff1b] rounded-lg shadow-lg text-slate-500 pt-8 pb-7">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 px-2 bg-[rgba(24,24,27,1)] rounded-lg shadow-lg text-slate-500 pt-8 pb-7">
           <div className="flex flex-col items-center justify-center mx-4">
             <div>
               <IoIosClock style={{width:"40px",height:"32px",color:"white"}}  />
@@ -57,13 +57,7 @@ const Info = () => {
 
 </div>
 
-  <div className="pt-12 pb-4 flex flex-wrap justify-center container text-center">
-  <h2 className="font-sans text-white text-base text-center mb-0 pt-2 mr-[6px]" > Skills You will Learn: </h2>  
-  <span className="border-white border-[3px] text-white rounded-sm px-[16px] md:px-[16px] py-[8px] mr-[14px] mb-[12px] text-sm md:text-base font-sans ">Crypto Currency</span>
-  <span  className="border-white border-[3px] text-white rounded-sm px-[16px] py-[8px] mr-[14px] mb-[12px] text-sm md:text-base font-sans">Blockchain</span>
-  <span  className="border-white border-[3px] text-white rounded-sm px-[16px] py-[8px] mr-[14px] mb-[12px] text-sm md:text-base font-sans">Trading</span>
-                
-  </div>
+
 
     </>
   );

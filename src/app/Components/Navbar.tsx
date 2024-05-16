@@ -26,7 +26,7 @@ const Navbar = () => {
     setShowNavbar(false);
   };
 
-  console.log(selectedItem);
+  // console.log(selectedItem);
   return (
     <div className="bg-[rgba(29,22,22,0.5)] border-b-[rgba(39,39,42)] border-solid border-b-[1px] z-50 top-0 sticky mt-[6px] pl-[20px] pr-[18px] w-full h-full sm:h-full md:h-full lg:h-full xl:h-full backdrop-blur-sm	">
       <div className="container  mx-auto px-[15px] flex   flex-col md:flex-col lg:flex-col xl:flex-col  md:items-start">

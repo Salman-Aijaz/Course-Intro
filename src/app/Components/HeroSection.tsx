@@ -27,9 +27,8 @@ const ratings = [<FaStar key={1} />,<FaStar key={2} />,<FaStar key={3} />,<FaSta
 // console.log(ratings)
 return (
     <div className=" flex flex-col max-lg:items-center max-sm:text-center lg:justify-center w-full bg-gradient-to-b  from-[rgba(24,56,129,1)] to-black sm:flex-col md:flex-row lg:flex-row  lg:py-20">
-        <div className="py-20 px-10">
-
-          <h1 className="font-bold font-sans text-4xl mt-8  text-white">
+        <div className="py-20 px-10  lg:pb-0">
+          <h1 className="font-bold font-sans text-4xl mt-0  xl:mt-20 text-white">
             Crypto Trading Fundamental
           </h1>
           <p className=" mt-2 mb-2 font-sans text-base	 text-white md:mb-2 sm:mb-2 lg:mb-6 xl:mb-6">
@@ -55,8 +54,9 @@ return (
         </div>
       
 
-      <div className="flex flex-col  items-center  px-10">
-        <Image src={bitImage} alt="ok" width={900} height={200}  className=""/>
+      <div className="flex flex-col   px-10 py-0 lg:py-20 xl:py-20 h-full ">
+        <Image src={bitImage} alt="ok" width={900} height={100}  className=""/>
+    
       </div>  
 
     </div>
