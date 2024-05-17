@@ -91,7 +91,7 @@ const PublicRating = () => {
       <h1 className="mt-6 mb-8   font-sans text-4xl   font-bold text-white ">
         Public Review & Rating
       </h1>
-      <div className="bg-[rgba(30,41,59,0.5)] py-4 px-6  w-fit ">
+      <div className="bg-[rgba(30,41,59,0.5)] py-4 px-6  w-full sm:w-full md:w-fit ">
         <div className="flex flex-col gap-6 sm:flex-row md:flex-row lg:flex-row">
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
           <div className="">
@@ -117,7 +117,7 @@ const PublicRating = () => {
             // console.log(review.text.length),
             (
               <div key={index} className="bg-[rgba(30,41,59,0.5)]  mt-6  gap-4  p-6   w-full  ">
-                <div  className="flex flex-col   mt-0 sm:flex-row md:flex-row lg:flex-row gap-[140px] ">
+                <div  className="flex flex-col   mt-0 sm:flex-row md:flex-row  gap-[24px] md:gap-[140px]  " >
                   <div className="flex flex-col gap-3">
                     <div className="flex flex-row ">
                       <p
