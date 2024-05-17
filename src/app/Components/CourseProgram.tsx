@@ -239,9 +239,8 @@ const CourseProgram = () => {
 
             <div className="flex gap-4 ml-0 mr-0 mt-10 pr-0 pl-0 w-full   overflow-x-auto">
               {course.lessons.map((lesson, lessonIndex) => (
-                <div className="flex-shrink-0  w-64 h-[220px] mb-2">
+                <div key={lessonIndex} className="flex-shrink-0  w-64 h-[220px] mb-2">
                 <article
-                  key={lessonIndex}
                   className=" bg-[rgba(29,26,39,1)] border-none rounded-md flex flex-col gap-2 h-full p-4"
                 >
                     <h4
