@@ -48,11 +48,11 @@ const PublicRating = () => {
       text: "Really Appreciate it",
     },
     {
-      name: "Muhammad Sufiyan",
+      name: "Sufiyan",
       avatarSrc: "https://github.com/shadcn.png",
       date: "9-May-2024",
       rating: ratings,
-      text: "Good course but there is more topics to cover sajlkfsjblskfdljhfshfd",
+      text: "Good course but there is more topics to cover",
     },
   ];
 
@@ -91,20 +91,20 @@ const PublicRating = () => {
       <h1 className="mt-6 mb-8   font-sans text-4xl   font-bold text-white ">
         Public Review & Rating
       </h1>
-      <div className="bg-[rgba(30,41,59,0.5)] py-6 px-4 gap-4 sm:px-6 md:px-6 lg:px-6  w-full rounded-md">
-        <div className="flex flex-col gap-0 sm:gap-6  md:gap-40 lg:gap-40 sm:flex-row md:flex-row lg:flex-row">
+      <div className="bg-[rgba(30,41,59,0.5)] py-4 px-6  w-fit ">
+        <div className="flex flex-col gap-6 sm:flex-row md:flex-row lg:flex-row">
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
           <div className="">
-          <p className="mb-0    text-[#2cbca5] leading-5 font-sans	 mr-0 sm:mb-1 lg:mb-1 xl:mb-1 ">
+          <p className=" text-[#2cbca5] leading-5 font-sans	  ">
             Average Rating: 4.5 Stars
           </p>
-        <p className=" mb-2 mt-2 font-sans	 text-white">200 Reviews</p>
+        <p className="  font-sans	 text-white">200 Reviews</p>
           </div>
         </div>
         
-          <div className="flex">
+          <div className="flex items-center">
             {ratings.map((elem, ind) => (
-              <div key={ind} className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl" >{elem}</div>
+              <div key={ind} className="text-yellow-300 text-3xl " >{elem}</div>
             ))}
           </div>
           </div>
@@ -116,17 +116,10 @@ const PublicRating = () => {
             // console.log("INDEX",index),
             // console.log(review.text.length),
             (
-              <div key={index} className="bg-[rgba(30,41,59,0.5)] rounded-md mt-4  gap-4  p-6   w-full  ">
-                <div  className="flex flex-col gap-6  mt-4 sm:flex-row md:flex-row lg:flex-row sm:gap-[7rem]  md:gap-64 lg:gap-64">
+              <div key={index} className="bg-[rgba(30,41,59,0.5)]  mt-6  gap-4  p-6   w-full  ">
+                <div  className="flex flex-col   mt-0 sm:flex-row md:flex-row lg:flex-row gap-[140px] ">
                   <div className="flex flex-col gap-3">
                     <div className="flex flex-row ">
-                      <Avatar>
-                        <AvatarImage
-                          src={review.avatarSrc}
-                          alt={`@${review.name}`}
-                        />
-                        <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
-                      </Avatar>
                       <p
                         className="text-center font-sans w-2 text-white"
                         onClick={toggleNameDisplay}
@@ -135,17 +128,19 @@ const PublicRating = () => {
                         {getDisplayName(review.name)}
                       </p>
                     </div>
-                    <p className="text-white font-sans">{review.date}</p>
-                  </div>
-                  <div className="flex flex-col gap-3 w-56  ">
+
                     <span className="flex">
                       {review.rating.map((elem, ind) => (
-                        <div  key={ind} className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl">
+                        <div  key={ind} className="text-white  text-2xl">
                           {elem}
                         </div>
                       ))}
                     </span>
-                    <p className={`h-auto ${readMore ? 'max-h-none' : 'h-2'} w-52 text-white  font-sans`}  onClick={toggleReadDisplay}>
+                    <p className="text-white font-sans">{review.date}</p>
+                  </div>
+                  <div className="flex flex-col gap-3 w-fit  ">
+                  
+                    <p className={`h-auto ${readMore ? 'max-h-none' : 'h-2'} w-fit text-white  font-sans`}  onClick={toggleReadDisplay}>
                       
                       {getReadMore(review.text)}
                       {review.text.length > 45 && !readMore ?(
@@ -169,47 +164,6 @@ const PublicRating = () => {
 
   {/*RATING FORM */}
 
-  <div className="container flex justify-center items-center "> 
-
-<div className="bg-[rgba(30,41,59,0.5)] py-6   mt-4 max-w-screen-sm container mb-4  ">
-        <p className="   font-sans  font-bold text-4xl   text-white     mb-4 ">
-          Rate Us
-        </p>
-
-        <p className=" font-semibold text-zinc-500">
-          Your Input is super Important in helping us understand your needs
-          better, so we can customize our services to suit you perfectly{" "}
-        </p>
-
-        <h4 className=" mt-4 font-bold text-4xl text-white font-sans" >
-          How Would your Rate our course?
-        </h4>
-
-        <div className="flex mt-4  gap-[5px] sm:gap-2 md:gap-4 lg:gap-4 xl:gap-4 ">
-          {emptyStars.map((elem, ind) => (
-            // console.log("INDEX of empty star",ind),
-            <div
-              key={ind}
-              className="text-yellow-200 flex p-2 sm:p-4 md:p-4 lg:p-5 xl:p-5  rounded-full	 border-solid	border-2 border-gray-600 relative hover:bg-gray-500  text-xl "
-            >
-              {elem}
-            </div>
-          ))}
-        </div>
-        <textarea
-          name=""
-          id=""
-          className="mt-4  text-white bg-black w-full rounded-md p-4"
-          rows={8}
-          cols={4}
-          placeholder="Enter Your review here"
-        ></textarea>
-
-        <button className="bg-blue-500 h-12 w-full rounded-md	flex items-center justify-center font-sans text-white mb-2 mt-4 ml-0">
-          Submit
-        </button>
-      </div>
-      </div>
       </>
   );
 };

@@ -56,7 +56,7 @@ const CourseProgram = () => {
     if (showFullName[courseIndex]?.[lessonIndex]) {
       return title;
     } else {
-      return title.length >= 20 ? `${title.slice(0, 20)} ` : title;
+      return title.length >= 30 ? `${title.slice(0, 30)} ` : title;
     }
   };
 
@@ -78,7 +78,7 @@ const CourseProgram = () => {
         {
           chapter: "Chapter 3",
           title: "Intro To TradingView",
-          description: "In this lesson you are introduced about what is TradingView and get an overview of the Crypto Fleet Course",
+          description: "In this lesson you are introduced about what is TradingView ",
         },
       ],
     },
@@ -88,7 +88,7 @@ const CourseProgram = () => {
       lessons: [
         {
           chapter: "Chapter 1",
-          title: "Chart",
+          title: "Chart Fundamental",
           description: "In this lesson you are introduced to the Chart in Trading and get an overview of the Crypto Fleet Course",
         },
       ],
@@ -219,38 +219,38 @@ const CourseProgram = () => {
   return (
     <div className="container flex justify-center items-center ">
       <div id="course" className="max-w-screen-xl w-full ">
-        <h1 className="mt-6 mb-8 ml-0 leading-7 text-white font-sans text-4xl font-bold sm:ml-0 md:ml-0 lg:ml-0">
+        <h1 className="mt-6 mb-8  leading-7 text-white font-sans text-4xl font-bold ">
           Course In This Program
         </h1>
 
         {displayedCourses.map((course, courseIndex) => (
           <div
             key={courseIndex}
-            className="ml-0 mr-0 mt-4 pr-4 pl-0 rounded-xl w-50 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-0"
+            className="ml-0 mr-0 mt-10 pr-4 pl-0 rounded-xl w-50"
           >
-            <div className="bg-[rgba(30,31,35,1)] py-4 px-4 w-full rounded-md">
-              <p className="mb-1 text-[#2cbca5] leading-5 font-sans">
+            <div className="bg-[rgba(30,31,35,1)] py-4 px-6 w-full rounded-lg">
+              <p className="mb-2 text-[#2cbca5] leading-5 font-sans">
                 Course {courseIndex + 1}: {course.time}
               </p>
-              <h1 className="mb-0 leading-7 text-white font-sans text-3xl font-bold mt-5">
+              <h1 className="mb-2 leading-7 text-white font-sans text-3xl font-bold mt-5">
                 {course.title}
               </h1>
             </div>
 
-            <div className="flex gap-4 ml-0 mr-0 mt-2 pr-0 pl-0 w-full h-full overflow-x-auto">
+            <div className="flex gap-4 ml-0 mr-0 mt-10 pr-0 pl-0 w-full   overflow-x-auto">
               {course.lessons.map((lesson, lessonIndex) => (
-                <div
+                <div className="flex-shrink-0  w-64 h-[220px] mb-2">
+                <article
                   key={lessonIndex}
-                  className="flex shrink-0 w-[280px] h-auto mb-2"
+                  className=" bg-[rgba(29,26,39,1)] border-none rounded-md flex flex-col gap-2 h-full p-4"
                 >
-                  <div className="bg-[rgba(17,24,39,1)] border-none h-52 md:p-4 p-2 rounded-md flex flex-col gap-2">
-                    <span
-                      className="text-white text-xl  font-semibold font-sans mt-4"
+                    <h4
+                      className="text-white h-12 text-xl  font-semibold font-sans mt-4"
                       onClick={ ()=>toggleNameDisplay(courseIndex,lessonIndex)}
                     >
                       {getDisplayName(lesson.title,courseIndex,lessonIndex)}
                       {
-                        lesson.title.length>20 && 
+                        lesson.title.length>30 && 
                         !showFullName[courseIndex]?.[lessonIndex] ? (
                           <span className="cursor-pointer text-white">
                             ...
@@ -259,10 +259,10 @@ const CourseProgram = () => {
                           <span></span>
                         )
                       }
-                    </span>
+                    </h4>
                     <div className="flex flex-col gap-1">
                       <p
-                        className="font-sans text-gray-500 text-sm md:text-base pt-2"
+                        className="font-sans text-gray-500 text-sm md:text-base mt-2 pt-2"
                         onClick={() => toggleReadDisplay(courseIndex, lessonIndex)}
                       >
                         {getReadMore(lesson.description, courseIndex, lessonIndex)}
@@ -276,7 +276,7 @@ const CourseProgram = () => {
                         )}
                       </p>
                     </div>
-                  </div>
+                </article>
                 </div>
               ))}
             </div>
