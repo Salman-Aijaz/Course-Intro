@@ -24,13 +24,7 @@ const PublicRating = () => {
     <FaStarHalfStroke  key={5}/>,
   ];
 
-  const emptyStars = [
-    <FaRegStar  key={1}/>,
-    <FaRegStar key={2}/>,
-    <FaRegStar key={3}/>,
-    <FaRegStar key={4}/>,
-    <FaRegStar key={5}/>,
-  ];
+  
   
   const reviews = [
     {
@@ -38,6 +32,7 @@ const PublicRating = () => {
       avatarSrc: "https://github.com/shadcn.png",
       date: "9-May-2024",
       rating: ratings,
+      AvgRating:3.5,
       text: "This course is very good ",
     },
     {
@@ -45,6 +40,7 @@ const PublicRating = () => {
       avatarSrc: "https://github.com/shadcn.png",
       date: "5-May-2024",
       rating: fullRatings,
+      AvgRating:4.5,
       text: "Really Appreciate it",
     },
     {
@@ -52,8 +48,25 @@ const PublicRating = () => {
       avatarSrc: "https://github.com/shadcn.png",
       date: "9-May-2024",
       rating: ratings,
+      AvgRating:3.5,
       text: "Good course but there is more topics to cover",
     },
+    {
+      name: "Sawaid",
+      avatarSrc: "https://github.com/shadcn.png",
+      date: "10-May-2024",
+      rating: fullRatings,
+      AvgRating:4.5,
+      text: "I wanna recommended more people",
+    },
+    {
+      name: "Hasan",
+      avatarSrc: "https://github.com/shadcn.png",
+      date: "12-May-2024",
+      rating: ratings,
+      AvgRating:3.5,
+      text: "Good course i like it",
+    }
   ];
 
   const [showFullName, setShowFullName] = useState(false);
@@ -83,6 +96,15 @@ const PublicRating = () => {
     }
   };
 
+
+  const calculateAvgRating=()=>{
+    const totalAvg = reviews.reduce((sum,reviews)=>(sum+reviews.AvgRating),0)
+    const getAvg= totalAvg/reviews.length
+    return getAvg
+  }
+
+  const avgRating = calculateAvgRating()
+
   return (
   <>
 <div className="container flex justify-center items-center ">
@@ -96,7 +118,7 @@ const PublicRating = () => {
         <div className="flex flex-col gap-0    sm:flex-col md:flex-row lg:flex-row sm:gap-0 md:gap-6 lg:gap-6 xl:gap-6 ">
           <div className="">
           <p className=" text-[#2cbca5] leading-5 font-sans	  ">
-            Average Rating: 4.5 Stars
+            Average Rating: {avgRating} Stars
           </p>
         <p className="  font-sans	 text-white">200 Reviews</p>
           </div>

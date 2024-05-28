@@ -12,7 +12,6 @@ export default function Home() {
     <Info/>
     <AboutCourse/>
     <CourseProgram/>
-    <PublicRating/>
      </div>
   );
 }
