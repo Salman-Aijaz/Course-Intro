@@ -126,11 +126,11 @@ const CourseProgram = () => {
     <div className="container mx-auto pt-20 pb-4 px-4 md:px-10 max-w-screen-xl">
       <div className="flex flex-col border-2 border-solid border-gray-500 rounded-lg pt-2 pb-4 px-4 ">
         <div className="flex items-center mb-4">
-          <span className="w-12 md:w-16 border-solid border-2 border-gray-500 rounded-md px-2 py-3 text-zinc-200">
+          <span className="w-12 md:w-16 border-solid border-2 border-gray-500 rounded-md px-2 py-3 dark:text-zinc-200">
             <GoStar className="w-8 h-5 md:w-10 md:h-7" />
           </span>
           <div className="ml-2 md:ml-4">
-            <h1 className="text-zinc-200 text-lg md:text-xl">COURSE OVERVIEW</h1>
+            <h1 className="dark:text-zinc-200 text-lg md:text-xl">COURSE OVERVIEW</h1>
             <div className="flex flex-wrap text-gray-500 font-medium">
               <p >9 Sections</p>
               <p className="px-1 md:px-2 ">•</p>
@@ -147,21 +147,21 @@ const CourseProgram = () => {
             <>
               <button 
               key={index}
-                className={` flex justify-between items-start p-4  border-b-[1px]  border-gray-500  hover:bg-zinc-900  ${index === 0?"rounded-t-lg":""}  ${ index === courses.length - 1 ? "rounded-b-lg":""} `}
+                className={` flex justify-between items-start p-4  border-b-[1px]  border-gray-500 hover:bg-zinc-100 dark:hover:bg-zinc-900  ${index === 0?"rounded-t-lg":""}  ${ index === courses.length - 1 ? "rounded-b-lg":""} `}
                 onClick={() => toggleCourse(index)}
               >
                 <div className="flex items-center justify-between w-full">
                   <div className="flex-1 ">
-                    <h3 className="text-zinc-200 w-fit text-left text-xs md:text-base">{course.title}</h3>
+                    <h3 className="dark:text-zinc-200 w-fit text-left text-xs md:text-base">{course.title}</h3>
                   </div>
                   <div className="flex items-center md:w-[190px] space-x-2">
-                    <h3 className="text-zinc-200 text-xs md:text-sm ml-4">{course.lectures}</h3>
+                    <h3 className="dark:text-zinc-200 text-xs md:text-sm ml-4">{course.lectures}</h3>
                     <p className="px-0 md:px-2 text-gray-500">•</p>
-                    <p className="text-zinc-200 text-xs md:text-sm">{course.time}</p> 
+                    <p className="dark:text-zinc-200 text-xs md:text-sm">{course.time}</p> 
                   </div>
                   <div className="ml-2 flex items-center justify-center">
                     <IoIosArrowDown
-                      className={`text-zinc-200 transition-transform ${
+                      className={`dark:text-zinc-200 transition-transform ${
                         accordionOpen[index] ? "rotate-180" : ""
                       }`}
                     />
@@ -179,11 +179,11 @@ const CourseProgram = () => {
                     // console.log("LESSON",lessonIndex),
                     // console.log("COURSE LESSON",course.lessons.length),
                     <div key={lessonIndex} className={`w-full flex  border-b-[1px]    border-gray-500 `}>
-                      <div className="text-zinc-200 text-xs md:text-base flex flex-1 items-center p-4 justify-start gap-2 md:gap-4">
+                      <div className="dark:text-zinc-200 text-xs md:text-base flex flex-1 items-center p-4 justify-start gap-2 md:gap-4">
                         <p >{lesson.topicIcon}</p>
                         <p >{lesson.topic}</p>
                       </div>
-                      <p className="text-zinc-200 p-4 text-xs md:text-sm">{course.time}</p>
+                      <p className="dark:text-zinc-200 p-4 text-xs md:text-sm">{course.time}</p>
                     </div>
                   ))}
                 </div>

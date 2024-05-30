@@ -7,7 +7,7 @@ import CourseProgram from "./Components/CourseProgram";
 import PublicRating from "./Components/PublicRating";
 export default function Home() {
   return (
-    <div className="bg-zinc-950">
+    <div className= "bg-white dark:bg-zinc-950">
     <HeroSection/>
     {/* <Info/> */}
     <AboutCourse/>
