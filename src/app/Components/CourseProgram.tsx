@@ -112,6 +112,7 @@ const courses = [
     ],
   },
 ];
+
 const CourseProgram = () => {
   const [accordionOpen, setAccordionOpen] = useState<boolean[]>(new Array(courses.length).fill(false));
 
@@ -125,42 +126,42 @@ const CourseProgram = () => {
     <div className="container mx-auto pt-20 pb-4 px-4 md:px-10 max-w-screen-xl">
       <div className="flex flex-col border-2 border-solid border-gray-500 rounded-lg pt-2 pb-4 px-4 ">
         <div className="flex items-center mb-4">
-          <span className="w-12 md:w-16 border-solid border-2 border-gray-500 rounded-md px-2 py-3 text-white">
+          <span className="w-12 md:w-16 border-solid border-2 border-gray-500 rounded-md px-2 py-3 text-zinc-200">
             <GoStar className="w-8 h-5 md:w-10 md:h-7" />
           </span>
           <div className="ml-2 md:ml-4">
-            <h1 className="text-white text-lg md:text-xl">COURSE OVERVIEW</h1>
-            <div className="flex flex-wrap text-gray-500">
-              <p className="font-medium">9 Sections</p>
-              <p className="px-1 md:px-2   font-medium">•</p>
-              <p className="px-1 md:px-2  font-medium">41 Lectures</p>
-              <p className="px-1 md:px-2   font-medium">•</p>
-              <p className="px-0 md:px-2   font-medium">14h 53min Total Length</p>
+            <h1 className="text-zinc-200 text-lg md:text-xl">COURSE OVERVIEW</h1>
+            <div className="flex flex-wrap text-gray-500 font-medium">
+              <p >9 Sections</p>
+              <p className="px-1 md:px-2 ">•</p>
+              <p className="px-1 md:px-2 ">41 Lectures</p>
+              <p className="px-1 md:px-2 ">•</p>
+              <p className="px-0 md:px-2 ">14h 53min Total Length</p>
             </div>
           </div>
         </div>
         <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid border-gray-500 rounded-lg ">
           {courses.map((course, index) => (
-            // console.log("COURSE KI LENGTH ",courses.length -1),
+            // console.log("COURSE LENGTH ",courses.length -1),
             // console.log("ACCORDION",accordionOpen[index]),
             <>
               <button 
               key={index}
-                className={`group flex justify-between items-start p-4  border-b-[1px]  border-gray-500  hover:bg-zinc-900  ${index === 0?"rounded-t-lg":""}  ${ index === courses.length - 1 ? "rounded-b-lg":""} `}
+                className={` flex justify-between items-start p-4  border-b-[1px]  border-gray-500  hover:bg-zinc-900  ${index === 0?"rounded-t-lg":""}  ${ index === courses.length - 1 ? "rounded-b-lg":""} `}
                 onClick={() => toggleCourse(index)}
               >
                 <div className="flex items-center justify-between w-full">
                   <div className="flex-1 ">
-                    <h3 className="text-white w-fit text-left text-xs md:text-base">{course.title}</h3>
+                    <h3 className="text-zinc-200 w-fit text-left text-xs md:text-base">{course.title}</h3>
                   </div>
-                  <div className="flex items-center  md:w-[190px] space-x-2">
-                    <h3 className="text-white text-xs md:text-sm ml-4">{course.lectures}</h3>
+                  <div className="flex items-center md:w-[190px] space-x-2">
+                    <h3 className="text-zinc-200 text-xs md:text-sm ml-4">{course.lectures}</h3>
                     <p className="px-0 md:px-2 text-gray-500">•</p>
-                    <p className="text-white text-xs md:text-sm">{course.time}</p> 
+                    <p className="text-zinc-200 text-xs md:text-sm">{course.time}</p> 
                   </div>
                   <div className="ml-2 flex items-center justify-center">
                     <IoIosArrowDown
-                      className={`text-blue-200 transition-transform ${
+                      className={`text-zinc-200 transition-transform ${
                         accordionOpen[index] ? "rotate-180" : ""
                       }`}
                     />
@@ -169,20 +170,20 @@ const CourseProgram = () => {
               </button>
 
               <div
-                className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out text-slate-700 text-sm ${
+                className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out  text-sm ${
                   accordionOpen[index] ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-0 pt-0 overflow-hidden  "  >
+                <div className="px-0 pt-0 overflow-hidden">
                   {course.lessons.map((lesson, lessonIndex) => (
-                    console.log("LESSON",lessonIndex),
-                    console.log("COURSE LESSON",course.lessons.length),
+                    // console.log("LESSON",lessonIndex),
+                    // console.log("COURSE LESSON",course.lessons.length),
                     <div key={lessonIndex} className={`w-full flex  border-b-[1px]    border-gray-500 `}>
-                      <div className="flex flex-1 items-center p-4 justify-start gap-2 md:gap-4">
-                        <p className="text-white text-xs md:text-base">{lesson.topicIcon}</p>
-                        <p className="text-white text-xs md:text-base">{lesson.topic}</p>
+                      <div className="text-zinc-200 text-xs md:text-base flex flex-1 items-center p-4 justify-start gap-2 md:gap-4">
+                        <p >{lesson.topicIcon}</p>
+                        <p >{lesson.topic}</p>
                       </div>
-                      <div className="text-white p-4 text-xs md:text-sm">{course.time}</div>
+                      <p className="text-zinc-200 p-4 text-xs md:text-sm">{course.time}</p>
                     </div>
                   ))}
                 </div>
