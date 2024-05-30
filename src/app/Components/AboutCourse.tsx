@@ -30,7 +30,6 @@ const AboutCourse = () => {
         ))}
        </div>
           </div>       
-
         </div>
     </>
   )

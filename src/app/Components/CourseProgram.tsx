@@ -130,19 +130,19 @@ const CourseProgram = () => {
           </span>
           <div className="ml-2 md:ml-4">
             <h1 className="text-white text-lg md:text-xl">COURSE OVERVIEW</h1>
-            <div className="flex flex-wrap text-gray-700">
-              <p className="">9 Sections</p>
-              <p className="px-1 md:px-2">•</p>
-              <p className="px-1 md:px-2">41 Lectures</p>
-              <p className="px-1 md:px-2">•</p>
-              <p className="px-0 md:px-2">14h 53min Total Length</p>
+            <div className="flex flex-wrap text-gray-500">
+              <p className="font-medium">9 Sections</p>
+              <p className="px-1 md:px-2   font-medium">•</p>
+              <p className="px-1 md:px-2  font-medium">41 Lectures</p>
+              <p className="px-1 md:px-2   font-medium">•</p>
+              <p className="px-0 md:px-2   font-medium">14h 53min Total Length</p>
             </div>
           </div>
         </div>
         <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid border-gray-500 rounded-lg ">
           {courses.map((course, index) => (
-            console.log("COURSE KI LENGTH ",courses.length -1),
-            console.log("ACCORDION",accordionOpen[index]),
+            // console.log("COURSE KI LENGTH ",courses.length -1),
+            // console.log("ACCORDION",accordionOpen[index]),
             <>
               <button 
               key={index}
