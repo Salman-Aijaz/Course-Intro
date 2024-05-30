@@ -1,10 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import { IoIosClock } from "react-icons/io";
 import { GiAchievement } from "react-icons/gi";
 import { PiCertificateFill } from "react-icons/pi";
-import { FaCircleCheck } from "react-icons/fa6";
-import { BsFillCheckSquareFill } from "react-icons/bs";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 

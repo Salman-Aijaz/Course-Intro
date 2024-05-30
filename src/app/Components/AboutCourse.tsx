@@ -8,7 +8,7 @@ const AboutCourse = () => {
 
   return (
     <>    
-    <Navbar/>
+    {/* <Navbar/> */}
    <div className='container flex flex-col sm:flex-col md:flex-col lg:flex-row  px-4 md:px-10 justify-center  max-w-screen-xl ' id='AboutCourse'>
    
         <div className='ml-0 mr-0 pr-0 pl-0 pb-0 sm:mr-0 md:ml-0  lg:ml-0 md:mr-0 lg:mr-[150px] xl:mr-[150px] xl:ml-0 py-20 md:pb-0  px-10'>

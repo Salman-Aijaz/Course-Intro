@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiVideo } from "react-icons/fi";
 import { GoStar } from "react-icons/go";
+import { GrCircleQuestion } from "react-icons/gr";
 
 const courses = [
   {
@@ -10,25 +11,28 @@ const courses = [
     lectures: "3 lectures",
     time: "10 Minute",
     lessons: [
-      { topic: "Crypto Profit Potential" },
-      { topic: "Intro To CryptoCurrency" },
-      { topic: "Intro To TradingView" },
+      { topic: "Crypto Profit Potential",topicIcon:<FiVideo/> },
+      { topic: "Intro To CryptoCurrency",topicIcon:<FiVideo/> },
+      { topic: "Intro To TradingView",topicIcon:<FiVideo/> },
     ],
   },
   {
     title: "Reading Chart",
     time: "10 Minute",
     lectures: "1 lecture",
-    lessons: [{ topic: "Chart Fundamental" }],
+    lessons: [{ topic: "Chart Fundamental" ,topicIcon:<FiVideo/>},{ topic: "Quiz" ,topicIcon:<GrCircleQuestion/>},],
   },
   {
     title: "Market Movement Basic",
     time: "20 Minute",
     lectures: "3 lectures",
     lessons: [
-      { topic: "Market Movement" },
-      { topic: "Types Of Market Movement" },
-      { topic: "Identify The Market Movement" },
+      { topic: "Market Movement",topicIcon:<FiVideo/> },
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "Types Of Market Movement",topicIcon:<FiVideo/> },
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "Identify The Market Movement",topicIcon:<FiVideo/> },
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
     ],
   },
   {
@@ -36,9 +40,9 @@ const courses = [
     time: "20 Minute",
     lectures: "3 lectures",
     lessons: [
-      { topic: "Example UpTrend" },
-      { topic: "Example DownTrend" },
-      { topic: "Example Consolidation" },
+      { topic: "Example UpTrend",topicIcon:<FiVideo/> },
+      { topic: "Example DownTrend",topicIcon:<FiVideo/> },
+      { topic: "Example Consolidation",topicIcon:<FiVideo/> },
     ],
   },
   {
@@ -46,9 +50,11 @@ const courses = [
     time: "20 Minute",
     lectures: "3 lectures",
     lessons: [
-      { topic: "CandleStick" },
-      { topic: "CandleStick Types" },
-      { topic: "CandleStick Example" },
+      { topic: "CandleStick",topicIcon:<FiVideo/> },
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "CandleStick Types",topicIcon:<FiVideo/> },
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "CandleStick Example" ,topicIcon:<FiVideo/>},
     ],
   },
   {
@@ -56,12 +62,17 @@ const courses = [
     time: "1 Hour",
     lectures: "6 lectures",
     lessons: [
-      { topic: "Major Key Level" },
-      { topic: "Key Level" },
-      { topic: "Break And Retest" },
-      { topic: "Rule Of Retest" },
-      { topic: "UpTrend Break And Retest" },
-      { topic: "DownTrend Break And Retest" },
+      { topic: "Major Key Level" ,topicIcon:<FiVideo/>},
+      { topic: "Key Level" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "Break And Retest" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "Rule Of Retest" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "UpTrend Break And Retest" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "DownTrend Break And Retest" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
     ],
   },
   {
@@ -69,12 +80,38 @@ const courses = [
     time: "10 Minute",
     lectures: "2 lectures",
     lessons: [
-      { topic: "Time Frames" },
-      { topic: "Best Time For Trading" },
+      { topic: "Time Frames" ,topicIcon:<FiVideo/>},
+      { topic: "Best Time For Trading" ,topicIcon:<FiVideo/>},
+    ],
+  },
+  {
+    title: "Patterns in Market Analysis",
+    time: "10 Minute",
+    lectures: "3 lectures",
+    lessons: [
+      { topic: "Double Top Pattern" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },    
+      { topic: "Double Bottom Pattern" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "Head and Shoulder Pattern" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+    ],
+  },
+  {
+    title: "Channel In Market Analysis",
+    time: "10 Minute",
+    lectures: "3 lectures",
+    lessons: [
+      { topic: "Bullish Channel" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "Bearish Channel" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+      { topic: "Bearish Triangle" ,topicIcon:<FiVideo/>},
+      { topic: "Quiz",topicIcon:<GrCircleQuestion/> },
+
     ],
   },
 ];
-
 const CourseProgram = () => {
   const [accordionOpen, setAccordionOpen] = useState<boolean[]>(new Array(courses.length).fill(false));
 
@@ -85,8 +122,8 @@ const CourseProgram = () => {
   };
 
   return (
-    <div className="container mx-auto pt-20 pb-4 px-4 md:px-10">
-      <div className="flex flex-col border-2 border-solid rounded-lg pt-2 pb-4 px-2 md:px-8">
+    <div className="container mx-auto pt-20 pb-4 px-4 md:px-10 max-w-screen-xl">
+      <div className="flex flex-col border-2 border-solid border-gray-500 rounded-lg pt-2 pb-4 px-4 ">
         <div className="flex items-center mb-4">
           <span className="w-12 md:w-16 border-solid border-2 border-gray-500 rounded-md px-2 py-3 text-white">
             <GoStar className="w-8 h-5 md:w-10 md:h-7" />
@@ -94,30 +131,32 @@ const CourseProgram = () => {
           <div className="ml-2 md:ml-4">
             <h1 className="text-white text-lg md:text-xl">COURSE OVERVIEW</h1>
             <div className="flex flex-wrap text-gray-700">
-              <p className="px-1 md:px-2">9 Sections</p>
+              <p className="">9 Sections</p>
               <p className="px-1 md:px-2">•</p>
               <p className="px-1 md:px-2">41 Lectures</p>
               <p className="px-1 md:px-2">•</p>
-              <p className="px-1 md:px-2">14h 53min Total Length</p>
+              <p className="px-0 md:px-2">14h 53min Total Length</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col border-2 border-solid rounded-lg py-2 px-2 md:px-8">
+        <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid border-gray-500 rounded-lg ">
           {courses.map((course, index) => (
+            console.log("COURSE KI LENGTH ",courses.length -1),
+            console.log("ACCORDION",accordionOpen[index]),
             <>
               <button 
               key={index}
-                className="group flex justify-between items-start py-2 px-2 pl-3 my-1 dark:hover:bg-zinc-900 hover:bg-zinc-900"
+                className={`group flex justify-between items-start p-4  border-b-[1px]  border-gray-500  hover:bg-zinc-900  ${index === 0?"rounded-t-lg":""}  ${ index === courses.length - 1 ? "rounded-b-lg":""} `}
                 onClick={() => toggleCourse(index)}
               >
                 <div className="flex items-center justify-between w-full">
-                  <div className="flex-1">
-                    <h3 className="text-white text-left text-xs md:text-base">{course.title}</h3>
+                  <div className="flex-1 ">
+                    <h3 className="text-white w-fit text-left text-xs md:text-base">{course.title}</h3>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center  md:w-[190px] space-x-2">
                     <h3 className="text-white text-xs md:text-sm ml-4">{course.lectures}</h3>
-                    <p className="px-2 text-gray-500">•</p>
-                    <p className="text-white text-xs md:text-sm">{course.time}</p>
+                    <p className="px-0 md:px-2 text-gray-500">•</p>
+                    <p className="text-white text-xs md:text-sm">{course.time}</p> 
                   </div>
                   <div className="ml-2 flex items-center justify-center">
                     <IoIosArrowDown
@@ -134,14 +173,16 @@ const CourseProgram = () => {
                   accordionOpen[index] ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-4 py-3 overflow-hidden">
+                <div className="px-0 pt-0 overflow-hidden  "  >
                   {course.lessons.map((lesson, lessonIndex) => (
-                    <div key={lessonIndex} className="w-full flex mb-2">
-                      <div className="flex flex-1 items-center justify-start gap-2 md:gap-4">
-                        <FiVideo className="text-white text-xs md:text-base" />
+                    console.log("LESSON",lessonIndex),
+                    console.log("COURSE LESSON",course.lessons.length),
+                    <div key={lessonIndex} className={`w-full flex  border-b-[1px]    border-gray-500 `}>
+                      <div className="flex flex-1 items-center p-4 justify-start gap-2 md:gap-4">
+                        <p className="text-white text-xs md:text-base">{lesson.topicIcon}</p>
                         <p className="text-white text-xs md:text-base">{lesson.topic}</p>
                       </div>
-                      <div className="text-white text-xs md:text-sm">{course.time}</div>
+                      <div className="text-white p-4 text-xs md:text-sm">{course.time}</div>
                     </div>
                   ))}
                 </div>
