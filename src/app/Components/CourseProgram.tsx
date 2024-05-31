@@ -124,9 +124,9 @@ const CourseProgram = () => {
 
   return (
     <div className="container mx-auto pt-20 pb-4 px-4 md:px-10 max-w-screen-xl">
-      <div className="flex flex-col border-[1px] border-gray-500 rounded-lg pt-2 pb-4 px-4 ">
+      <div className="flex flex-col border-2 border-[#f0f0f0] rounded-lg pt-2 pb-4 px-4 ">
         <div className="flex items-center mb-4">
-          <span className="w-12 md:w-16  border-[1px] border-gray-500 rounded-md px-2 py-3 dark:text-zinc-200">
+          <span className="w-12 md:w-16  border-2 border-[#f0f0f0] rounded-md px-2 py-3 dark:text-zinc-200">
             <GoStar className="w-8 h-5 md:w-10 md:h-7" />
           </span>
           <div className="ml-2 md:ml-4">
@@ -140,14 +140,14 @@ const CourseProgram = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col border-t-[1px] border-r-[1px] border-l-[1px] border-b-0 border-solid border-gray-500 rounded-lg ">
+        <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid   border-[#f0f0f0] rounded-lg ">
           {courses.map((course, index) => (
             // console.log("COURSE LENGTH ",courses.length -1),
             // console.log("ACCORDION",accordionOpen[index]),
             <>
               <button 
               key={index}
-                className={` flex justify-between items-start p-4  border-b-[1px]  border-gray-500 hover:bg-zinc-100 dark:hover:bg-zinc-900  ${index === 0?"rounded-t-lg":""}  ${ index === courses.length - 1 ? "rounded-b-lg":""} `}
+                className={` flex justify-between items-start p-4  border-b-2    border-[#f0f0f0] bg-[#f8f8f9] dark:hover:bg-zinc-900  ${index === 0?"rounded-t-lg":""}  ${ index === courses.length - 1 ? "rounded-b-lg":""} `}
                 onClick={() => toggleCourse(index)}
               >
                 <div className="flex items-center justify-between w-full">
@@ -178,7 +178,7 @@ const CourseProgram = () => {
                   {course.lessons.map((lesson, lessonIndex) => (
                     // console.log("LESSON",lessonIndex),
                     // console.log("COURSE LESSON",course.lessons.length),
-                    <div key={lessonIndex} className={`w-full flex  border-b-[1px]    border-gray-500 `}>
+                    <div key={lessonIndex} className={`w-full flex  border-b-[1px]     border-[#f0f0f0] `}>
                       <div className="dark:text-zinc-200 text-xs md:text-base flex flex-1 items-center p-4 justify-start gap-2 md:gap-4">
                         <p >{lesson.topicIcon}</p>
                         <p >{lesson.topic}</p>

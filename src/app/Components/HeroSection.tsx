@@ -34,7 +34,7 @@ const HeroSection = () => {
 
 {/* 2nd  */}
       <div className="flex  pl-0 py-0 pt-10   h-full">
-        <div className="flex flex-col gap-4 w-full md:w-full lg:w-[400px]  bg-gradient-to-r to-[#d6e9fa] from-[#e5eef8] dark:from-[#121E3C] dark:to-[#161E38]  rounded-md py-8 px-6 border-gray-500">
+        <div className="flex flex-col gap-4 w-full md:w-full lg:w-[400px]  bg-gradient-to-r bg-[#f8f8f9] border-2 border-[#f0f0f0]  dark:from-[#121E3C] dark:to-[#161E38]  rounded-md py-8 px-6 ">
           <div className="flex gap-4 ">
             <IoIosClock  className="w-10 h-[76px] dark:text-zinc-200 text-[rgba(25,25,25,1)]" />
             <div className="flex flex-col">

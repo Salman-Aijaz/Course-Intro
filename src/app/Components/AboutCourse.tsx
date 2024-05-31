@@ -18,7 +18,7 @@ const AboutCourse = () => {
      Individual coin ownership records are stored in a digital ledger, which is a computerized database using strong cryptography to secure transaction records, control the creation of additional coins, and verify the transfer of coin ownership.[3][4][5] Despite the term that has come to describe many of the fungible blockchain tokens that have been created, cryptocurrencies are not considered to be currencies in the traditional sense, and varying legal treatments have been applied to them in various jurisdicitons, including classification as commodities, securities, and currencies. Cryptocurrencies are generally viewed as a distinct asset class in practice.[6][7][8] Some crypto schemes use validators to maintain the cryptocurrency. In a proof-of-stake model, owners put up their tokens as collateral. In return, they get authority over the token in proportion to the amount they stake.
      </p> 
         </div>
-        <div className='bg-gradient-to-r to-[#d6e9fa] from-[#e5eef8] dark:bg-[rgba(30,41,59,0.5)]  p-[30px] border-gray-500   rounded-md  mt-0 sm:mt-0 lg:mt-44 md:mt-0 xl:mt-44 w-fit lg:w-[335px]  min-h-auto md:min-h-auto lg:max-h-[368px]'>
+        <div className='bg-gradient-to-r bg-[#f8f8f9] dark:bg-[rgba(30,41,59,0.5)]  p-[30px]  border-2 border-[#f0f0f0]   rounded-md  mt-0 sm:mt-0 lg:mt-44 md:mt-0 xl:mt-44 w-fit lg:w-[335px]  min-h-auto md:min-h-auto lg:max-h-[368px]'>
           <h3 className=' font-sans mb-4	 dark:text-zinc-200 text-lg md:text-xl font-semibold'>Skills you will learn </h3>
           
        <div className="flex flex-wrap w-fit lg:w-[335px] ">
