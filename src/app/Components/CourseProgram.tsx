@@ -159,7 +159,7 @@ const CourseProgram = () => {
                   <h3 className="dark:text-zinc-200 flex-1  text-left text-xs md:text-base">
                     {course.title}
                   </h3>
-                  <div className="flex items-center  space-x-2">
+                  <div className="flex items-center  gap-2 ">
                     <h3 className="dark:text-zinc-200 text-xs md:text-sm">
                       {course.lectures}
                     </h3>
