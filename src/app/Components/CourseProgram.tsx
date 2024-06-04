@@ -125,13 +125,13 @@ const CourseProgram = () => {
       previous.map((item, idx) => (idx === index ? !item : item))
     );
   };
-
+  
   return (
-    <div className="container  pt-20 pb-4 px-4 md:px-10 max-w-screen-xl">
-      <div className="flex flex-col border-2 border-[#f0f0f0] rounded-lg pt-2 pb-4 px-4 ">
+    <div className="container pt-20 pb-4 px-4 md:px-10 max-w-screen-xl">
+      <div className="flex flex-col border-2 border-zinc-200 rounded-lg pt-2 pb-4 px-4">
         <div className="flex items-center mb-4">
-          <span className="w-12  md:w-16 border-2 border-[#f0f0f0] rounded-md px-2 py-3 dark:text-zinc-200">
-            <GoStar className="w-8 h-5 md:w-11 md:h-7" />
+          <span className="w-12 md:w-16 border-2 border-zinc-200 rounded-md px-2 py-3 dark:text-zinc-200">
+            <GoStar className="w-8 h-5 md:w-11 md:h-7"/>
           </span>
           <div className="ml-2 md:ml-4">
             <h1 className="dark:text-zinc-200 text-lg md:text-xl">
@@ -146,20 +146,20 @@ const CourseProgram = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid border-[#f0f0f0] rounded-lg">
+        <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid border-zinc-200 rounded-lg">
           {courses.map((course, index) => (
             <React.Fragment key={index}>
               <button
-                className={`flex  p-4 border-b-2 border-[#f0f0f0] bg-[#f8f8f9] dark:hover:bg-zinc-900 ${
+                className={`flex p-4 border-b-2 border-zinc-200  bg-gray-50 dark:hover:bg-zinc-900 ${
                   index === 0 ? "rounded-t-lg" : ""
                 } ${index === courses.length - 1 ? "rounded-b-lg" : ""}`}
                 onClick={() => toggleCourse(index)}
               >
-                <div className="flex  items-center  w-full">
-                  <h3 className="dark:text-zinc-200 flex-1  text-left text-xs md:text-base">
+                <div className="flex items-center w-full">
+                  <h3 className="dark:text-zinc-200 flex-1 text-left text-xs md:text-base">
                     {course.title}
                   </h3>
-                  <div className="flex items-center  gap-2 ">
+                  <div className="flex items-center gap-2">
                     <h3 className="dark:text-zinc-200 text-xs md:text-sm">
                       {course.lectures}
                     </h3>
@@ -168,9 +168,9 @@ const CourseProgram = () => {
                       {course.time}
                     </p>
                   </div>
-                  <div className="ml-2 flex items-center ">
+                  <div className="ml-2 flex items-center">
                     <IoIosArrowDown
-                      className={`dark:text-zinc-200 transition-transform ${
+                      className={`dark:text-zinc-200 transition ${
                         accordionOpen[index] ? "rotate-180" : ""
                       }`}
                     />
@@ -179,16 +179,16 @@ const CourseProgram = () => {
               </button>
 
               <div
-                className={`flex flex-col  overflow-hidden  text-sm ${
-                  accordionOpen[index] ? "max-h-[1000px]" : "max-h-0"
+                className={`flex flex-col overflow-hidden text-sm ${
+                  accordionOpen[index] ? "h-full" : "h-0"
                 }`}
               >
                 {course.lessons.map((lesson, lessonIndex) => (
                   <div
                     key={lessonIndex}
-                    className=" flex border-b-[1px] border-[#f0f0f0]"
+                    className="flex border-b-[1px] border-[#f0f0f0]"
                   >
-                    <div className="dark:text-zinc-200 text-xs md:text-base flex flex-1 items-center p-4  gap-2 md:gap-4">
+                    <div className="dark:text-zinc-200 text-xs md:text-base flex flex-1 items-center p-4 gap-2 md:gap-4">
                       <p>{lesson.topicIcon}</p>
                       <p>{lesson.topic}</p>
                     </div>

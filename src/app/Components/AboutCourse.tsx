@@ -13,9 +13,9 @@ const AboutCourse = () => {
   ];
 
   return (
-    <div className="container flex flex-col  lg:flex-row  px-4 md:px-10 justify-center  max-w-screen-xl">
-      <div className=" md:mr-0 lg:mr-[150px]   pt-20">
-        <h1 className="dark:text-zinc-200  mb-8 font-sans font-bold text-4xl  ">
+    <div className="container flex flex-col lg:flex-row px-4 md:px-10 justify-center max-w-screen-xl font-sans">
+      <div className="lg:mr-[20px] xl:mr-[150px] pt-20">
+        <h1 className="dark:text-zinc-200 mb-8 font-bold text-4xl">
           About This Course
         </h1>
         <p className="dark:text-zinc-200 text-lg">
@@ -41,16 +41,16 @@ const AboutCourse = () => {
           they stake.
         </p>
       </div>
-      <div className="bg-gradient-to-r bg-[#f8f8f9] dark:bg-[rgba(30,41,59,0.5)]  p-[30px]  border-2 border-[#f0f0f0]   rounded-md  lg:mt-44 md:mt-0  w-fit lg:w-[335px]   lg:max-h-[368px]">
-        <h3 className=" font-sans mb-4	 dark:text-zinc-200 text-lg md:text-xl font-semibold">
+      <div className="bg-gray-50 dark:bg-[rgba(30,41,59,0.5)] p-8 border-2 border-[#f0f0f0] rounded-md lg:mt-44 xl:mt-52 w-fit lg:max-h-[368px]">
+        <h3 className="mb-4 dark:text-zinc-200 text-lg md:text-xl font-semibold">
           Skills you will learn
         </h3>
 
-        <div className="flex flex-wrap w-fit lg:w-[335px] ">
+        <div className="flex flex-wrap w-fit lg:w-[335px]">
           {cryptoFleetSkills.map((elem, ind) => (
             <span
               key={ind}
-              className="p-2 mr-2 my-2 border border-gray-500 dark:text-zinc-200 rounded-sm text-sm font-semibold font-sans"
+              className="p-2 mr-2 my-2 border border-gray-500 dark:text-zinc-200 rounded-sm text-sm font-semibold"
             >
               {elem}
             </span>
