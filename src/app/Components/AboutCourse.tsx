@@ -41,7 +41,7 @@ const AboutCourse = () => {
           they stake.
         </p>
       </div>
-      <div className="bg-gray-50 dark:bg-[rgba(30,41,59,0.5)] p-8 border-2 border-[#f0f0f0] rounded-md lg:mt-44 xl:mt-52 w-fit lg:max-h-[368px]">
+      <div className="bg-gray-50 dark:bg-[rgba(30,41,59,0.5)] p-8 border-2 border-[#f0f0f0] rounded-md lg:mt-52 w-fit lg:max-h-[368px]">
         <h3 className="mb-4 dark:text-zinc-200 text-lg md:text-xl font-semibold">
           Skills you will learn
         </h3>
