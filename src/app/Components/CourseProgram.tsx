@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiVideo } from "react-icons/fi";
-import { GoStar } from "react-icons/go";
 import { GrCircleQuestion } from "react-icons/gr";
+import { GoStar } from "react-icons/go";
 
 const courses = [
   {
@@ -62,7 +62,7 @@ const courses = [
   },
   {
     title: "Key Level And Testing",
-    time: "1 Hour",
+    time: "40 Minute",
     lectures: "6 lectures",
     lessons: [
       { topic: "Major Key Level", topicIcon: <FiVideo /> },
@@ -125,52 +125,54 @@ const CourseProgram = () => {
       previous.map((item, idx) => (idx === index ? !item : item))
     );
   };
-  
+
   return (
-    <div className="container pt-20 pb-4 px-4 md:px-10 max-w-screen-xl">
-      <div className="flex flex-col border-2 border-zinc-200 rounded-lg pt-2 pb-4 px-4">
+    <div className="mx-auto  px-8 xl:px-0  max-w-screen-xl dark:text-zinc-200 font-sans">
+      <div className="border-2 border-[#f0f0f0] rounded-lg p-4">
         <div className="flex items-center mb-4">
-          <span className="w-12 md:w-16 border-2 border-zinc-200 rounded-md px-2 py-3 dark:text-zinc-200">
-            <GoStar className="w-8 h-5 md:w-11 md:h-7"/>
+          <span className="border-2 border-[#f0f0f0] rounded-md p-3">
+            <GoStar className="w-8 h-5 md:w-10 md:h-7" />
           </span>
-          <div className="ml-2 md:ml-4">
-            <h1 className="dark:text-zinc-200 text-lg md:text-xl">
-              COURSE OVERVIEW
-            </h1>
+          <div className="ml-4">
+            <h1 className="text-lg md:text-xl">COURSE OVERVIEW</h1>
             <div className="flex flex-wrap text-gray-500 font-medium">
               <p>9 Sections</p>
               <p className="px-1 md:px-2">•</p>
-              <p>41 Lectures</p>
+              <p className="px-1 md:px-2">41 Lectures</p>
               <p className="px-1 md:px-2">•</p>
-              <p>14h 53min Total Length</p>
+              <p className="md:px-2">14h 53min Total Length</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid border-zinc-200 rounded-lg">
+        <div className="flex flex-col border-t-2 border-r-2 border-l-2 border-b-0 border-solid border-[#f0f0f0] rounded-lg">
           {courses.map((course, index) => (
             <React.Fragment key={index}>
               <button
-                className={`flex p-4 border-b-2 border-zinc-200  bg-gray-50 dark:hover:bg-zinc-900 ${
+                className={`p-4 border-b-2 border-[#f0f0f0]  dark:hover:bg-zinc-900 ${
                   index === 0 ? "rounded-t-lg" : ""
                 } ${index === courses.length - 1 ? "rounded-b-lg" : ""}`}
                 onClick={() => toggleCourse(index)}
               >
-                <div className="flex items-center w-full">
-                  <h3 className="dark:text-zinc-200 flex-1 text-left text-xs md:text-base">
+                <div className="flex w-full">
+                  <h3 className="text-left text-xs md:text-base flex-1">
                     {course.title}
                   </h3>
-                  <div className="flex items-center gap-2">
-                    <h3 className="dark:text-zinc-200 text-xs md:text-sm">
+                  <div className="flex items-center gap-2 min-w-[175px]">
+                    <h3
+                      className={`text-xs md:text-sm ml-4 ${
+                        course.lectures.length <= 9
+                          ? "w-[56px] md:w-[59px]  text-left"
+                          : ""
+                      }`}
+                    >
                       {course.lectures}
                     </h3>
-                    <p className="text-gray-500">•</p>
-                    <p className="dark:text-zinc-200 text-xs md:text-sm">
-                      {course.time}
-                    </p>
+                    <p className=" text-gray-500">•</p>
+                    <p className="text-xs md:text-sm">{course.time}</p>
                   </div>
                   <div className="ml-2 flex items-center">
                     <IoIosArrowDown
-                      className={`dark:text-zinc-200 transition ${
+                      className={`transition-transform duration-150 ${
                         accordionOpen[index] ? "rotate-180" : ""
                       }`}
                     />
@@ -179,24 +181,22 @@ const CourseProgram = () => {
               </button>
 
               <div
-                className={`flex flex-col overflow-hidden text-sm ${
-                  accordionOpen[index] ? "h-full" : "h-0"
+                className={`overflow-hidden transition-all duration-500  ${
+                  accordionOpen[index] ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                {course.lessons.map((lesson, lessonIndex) => (
-                  <div
-                    key={lessonIndex}
-                    className="flex border-b-[1px] border-[#f0f0f0]"
-                  >
-                    <div className="dark:text-zinc-200 text-xs md:text-base flex flex-1 items-center p-4 gap-2 md:gap-4">
-                      <p>{lesson.topicIcon}</p>
-                      <p>{lesson.topic}</p>
+                  {course.lessons.map((lesson, lessonIndex) => (
+                    <div
+                      key={lessonIndex}
+                      className="w-full flex border-b-2 border-[#f0f0f0]"
+                    >
+                      <div className="text-xs md:text-base flex flex-1 items-center p-4 gap-2 md:gap-4">
+                        <p>{lesson.topicIcon}</p>
+                        <p>{lesson.topic}</p>
+                      </div>
+                      <p className="p-4 text-xs md:text-sm">{course.time}</p>
                     </div>
-                    <p className="dark:text-zinc-200 p-4 text-xs md:text-sm">
-                      {course.time}
-                    </p>
-                  </div>
-                ))}
+                  ))}
               </div>
             </React.Fragment>
           ))}

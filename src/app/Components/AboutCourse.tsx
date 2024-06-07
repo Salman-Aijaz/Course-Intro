@@ -13,18 +13,18 @@ const AboutCourse = () => {
   ];
 
   return (
-    <div className="container flex flex-col lg:flex-row px-4 md:px-10 justify-center max-w-screen-xl font-sans">
-      <div className="lg:mr-[20px] xl:mr-[150px] pt-20">
-        <h1 className="dark:text-zinc-200 mb-8 font-bold text-4xl">
+    <div className="flex flex-col lg:flex-row justify-evenly lg:py-20 px-8 lg:px-0 font-sans dark:text-zinc-200">
+      <div className="lg:max-w-[490px] xl:max-w-screen-sm py-10 lg:py-0 text-justify">
+        <h1 className="mb-8 font-bold text-4xl">
           About This Course
         </h1>
-        <p className="dark:text-zinc-200 text-lg">
+        <p className="text-lg">
           A cryptocurrency, crypto-currency, or crypto is a digital currency
           designed to work as a medium of exchange through a computer network
           that is not reliant on any central authority, such as a government or
           bank, to uphold or maintain it.
         </p>
-        <p className="mt-4 mb-6 text-lg dark:text-zinc-200">
+        <p className="mt-4 text-lg">
           Individual coin ownership records are stored in a digital ledger,
           which is a computerized database using strong cryptography to secure
           transaction records, control the creation of additional coins, and
@@ -41,16 +41,16 @@ const AboutCourse = () => {
           they stake.
         </p>
       </div>
-      <div className="bg-gray-50 dark:bg-[rgba(30,41,59,0.5)] p-8 border-2 border-[#f0f0f0] rounded-md lg:mt-52 w-fit lg:max-h-[368px]">
-        <h3 className="mb-4 dark:text-zinc-200 text-lg md:text-xl font-semibold">
+      <div className="bg-gray-50 dark:bg-[rgba(30,41,59,0.5)] p-8 border-2 border-[#f0f0f0] rounded-md">
+        <h3 className="mb-4 text-lg md:text-xl font-semibold">
           Skills you will learn
         </h3>
 
-        <div className="flex flex-wrap w-fit lg:w-[335px]">
+        <div className="flex flex-wrap lg:w-96">
           {cryptoFleetSkills.map((elem, ind) => (
             <span
               key={ind}
-              className="p-2 mr-2 my-2 border border-gray-500 dark:text-zinc-200 rounded-sm text-sm font-semibold"
+              className="p-2 mr-2 my-2 border-2 border-gray-500 rounded-sm text-sm font-semibold"
             >
               {elem}
             </span>
