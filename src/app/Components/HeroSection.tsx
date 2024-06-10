@@ -33,7 +33,7 @@ const HeroSection = () => {
     <div className="flex flex-col justify-evenly items-center lg:py-20 
     lg:flex-row px-8 lg:px-0 
     dark:bg-gradient-to-b dark:from-[rgba(24,56,129,1)] dark:to-zinc-950">
-      <div className="lg:w-1/2 my-8 lg:my-0">
+      <div className="lg:w-2/5 my-8 lg:my-0">
         <h1 className="font-bold text-4xl">Crypto Trading Fundamental</h1>
         <p className="my-4 text-base">Short Course</p>
         <p className="text-base">

@@ -14,7 +14,7 @@ const AboutCourse = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-evenly px-8 lg:px-0">
-      <div className="lg:max-w-md xl:max-w-screen-sm py-10 lg:py-0 text-justify">
+      <div className="lg:w-2/5 py-10 lg:py-0 text-justify">
         <h1 className="font-bold text-4xl">About This Course</h1>
         <p className="mb-4 mt-8 text-lg">
           A cryptocurrency is a digital currency that operates independently of
@@ -44,7 +44,7 @@ const AboutCourse = () => {
           {cryptoFleetSkills.map((elem, ind) => (
             <span
               key={ind}
-              className="p-2 mr-2 my-2 border-2 border-gray-500 rounded-sm text-sm font-semibold">
+              className="p-2 mr-2 mb-2 border-2 border-gray-500 rounded-sm text-sm font-semibold">
               {elem}
             </span>
           ))}
