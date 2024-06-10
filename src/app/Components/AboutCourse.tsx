@@ -35,7 +35,7 @@ const AboutCourse = () => {
           big tech, and central banks are adapting to its emergence.
         </p>
       </div>
-      <div className="bg-gray-50 dark:bg-[rgba(30,41,59,0.5)] p-8 border-2 border-[#f0f0f0] rounded-md">
+      <div className="bg-gray-50 dark:bg-[rgba(30,41,59,0.5)] p-8 border-2 border-[#f0f0f0] rounded-md lg:h-96">
         <h3 className="mb-4 text-lg md:text-xl font-semibold">
           Skills you will learn
         </h3>
