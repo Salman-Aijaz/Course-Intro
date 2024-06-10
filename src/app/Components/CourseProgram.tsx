@@ -129,11 +129,11 @@
     return (
       <div className="mx-auto px-8 xl:px-0 max-w-screen-xl">
         <div className="border-2 border-[#f0f0f0] rounded-lg p-4">
-          <div className="flex items-center mb-4">
+          <div className="flex items-center mb-4 gap-4">
             <span className="border-2 border-[#f0f0f0] rounded-md p-3">
               <GoStar className="w-8 h-5 md:w-10 md:h-7"/>
             </span>
-            <div className="ml-4">
+            <div>
               <h1 className="text-lg md:text-xl">COURSE OVERVIEW</h1>
               <div className="flex gap-2 flex-wrap text-gray-500 font-medium">
                 <p>9 Sections</p>
@@ -160,7 +160,7 @@
                           accordionOpen[index] ? "rotate-180" : ""
                         }`}
                       />
-                    <h3 className="text-left text-xs md:text-base">
+                    <h3 className="text-xs md:text-base">
                       {course.title}
                     </h3>
                   </div>
@@ -179,15 +179,12 @@
                   }`}
                 >
                     {course.lessons.map((lesson, lessonIndex) => (
-                      <div
-                        key={lessonIndex}
-                        className="flex border-b-2 border-[#f0f0f0]">
-                        <div className="text-xs md:text-base flex flex-1 items-center p-4 gap-2 md:gap-4">
+                        <div key={lessonIndex} className="border-b-2 border-[#f0f0f0] text-xs md:text-base flex
+                         items-center p-4 gap-2 md:gap-4">
                           <p>{lesson.topicIcon}</p>
                           <p className="flex-1">{lesson.topic}</p>
                         <p className="text-xs md:text-sm">{course.time}</p>
                         </div>
-                      </div>
                     ))}
                 </div>
               </React.Fragment>

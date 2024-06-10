@@ -14,9 +14,9 @@ const AboutCourse = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-evenly px-8 lg:px-0">
-      <div className="lg:w-2/5 py-10 lg:py-0 text-justify">
+      <div className="lg:w-2/5 my-10 lg:my-0 text-justify">
         <h1 className="font-bold text-4xl">About This Course</h1>
-        <p className="mb-4 mt-8 text-lg">
+        <p className="my-8 text-lg">
           A cryptocurrency is a digital currency that operates independently of
           central authorities like governments or banks. Transactions and
           ownership records are secured by cryptography and stored in a digital
@@ -44,7 +44,7 @@ const AboutCourse = () => {
           {cryptoFleetSkills.map((elem, ind) => (
             <span
               key={ind}
-              className="p-2 mr-2 mb-2 border-2 border-gray-500 rounded-sm text-sm font-semibold">
+              className="p-2 mr-2 mb-4 border-2 border-gray-500 rounded-sm text-sm font-semibold">
               {elem}
             </span>
           ))}

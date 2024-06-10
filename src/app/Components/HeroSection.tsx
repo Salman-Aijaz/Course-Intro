@@ -63,8 +63,8 @@ const HeroSection = () => {
       </div>
 
       {/* 2nd  */}
-      <div className="w-full lg:w-96 dark:bg-gradient-to-r bg-gray-50 dark:from-[#274060] dark:to-[#1B2845] 
-      border-2 border-[#f0f0f0] rounded-md p-6 grid gap-8">
+      <div className="w-full lg:w-96 dark:bg-gradient-to-r bg-gray-50 dark:from-[#274060] dark:to-[#1B2845]   
+      border-2 border-[#f0f0f0] rounded-md p-6 flex flex-col gap-8">
         {sections.map((section, index) => (
           <div className="flex gap-4" key={index}>
             <section.icon className="w-12 h-12 text-[#191919]"/>
