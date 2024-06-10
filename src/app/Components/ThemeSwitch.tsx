@@ -16,9 +16,8 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className={`rounded-md p-5 ${isDark ? '' : 'bg-gray-50'} cursor-pointer`}
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
-    >
+      className="rounded-md p-5  cursor-pointer"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}>
       {isDark ? <FiSun /> : <FiMoon />}
     </button>
   )

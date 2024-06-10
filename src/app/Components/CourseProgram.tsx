@@ -174,7 +174,7 @@
                     </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-500  ${
+                  className={`overflow-hidden transition-all duration-300  ${
                     accordionOpen[index] ? "h-full" : "h-0"
                   }`}
                 >
