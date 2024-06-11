@@ -6,13 +6,13 @@ import { useTheme } from 'next-themes'
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
-  const { setTheme, resolvedTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
 
   useEffect(() =>  setMounted(true), [])
 
   if (!mounted) return null
 
-  const isDark = resolvedTheme === 'dark'
+  const isDark = theme === 'dark'
 
   return (
     <button
