@@ -166,7 +166,7 @@
                   </div>
                     <div className="hidden sm:flex items-center gap-2">
                       <h3
-                      className={`text-xs md:text-sm ${course.lectures.length <=9 ?"w-[68px]":""}`}>
+                      className={`text-xs md:text-sm ${course.lectures.length <=9 ?"w-[59px] md:w-[68px]":""}`}>
                         {course.lectures}
                       </h3>
                       <p className="text-gray-500">•</p>
