@@ -156,7 +156,7 @@
                 >
                   <div className="flex flex-1 items-center gap-2">
                   <IoIosArrowDown
-                        className={`transition-all duration-150 ${
+                        className={`transition-all duration-300 ${
                           accordionOpen[index] ? "rotate-180" : ""
                         }`}
                       />
@@ -166,7 +166,7 @@
                   </div>
                     <div className="hidden sm:flex items-center gap-2">
                       <h3
-                      className="text-xs md:text-sm w-[60px]">
+                      className={`text-xs md:text-sm ${course.lectures.length <=9 ?"w-[68px]":""}`}>
                         {course.lectures}
                       </h3>
                       <p className="text-gray-500">•</p>
@@ -175,7 +175,7 @@
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300  ${
-                    accordionOpen[index] ? "h-full" : "h-0"
+                    accordionOpen[index] ? "h-fit" : "h-0"
                   }`}
                 >
                     {course.lessons.map((lesson, lessonIndex) => (
