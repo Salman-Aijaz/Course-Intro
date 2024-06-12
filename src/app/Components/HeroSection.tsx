@@ -31,7 +31,7 @@ const sections = [
 const HeroSection = () => {
   return (
     <div className="flex flex-col justify-evenly items-center lg:py-20 
-    lg:flex-row px-8 lg:px-0 
+    lg:flex-row px-4 lg:px-0 
     dark:bg-gradient-to-b dark:from-[rgba(24,56,129,1)] dark:to-zinc-950">
       <div className="lg:w-2/5 my-8 lg:my-0">
         <h1 className="font-bold text-4xl">Crypto Trading Fundamental</h1>
@@ -64,16 +64,16 @@ const HeroSection = () => {
 
       {/* 2nd  */}
       <div className="w-full lg:w-96 dark:bg-gradient-to-r bg-gray-50 dark:from-[#274060] dark:to-[#1B2845]   
-      border-2 border-[#f0f0f0] rounded-md p-6 flex flex-col gap-8">
+      border rounded-md p-4 flex flex-col gap-8">
         {sections.map((section, index) => (
-          <div className="flex gap-4" key={index}>
-            <section.icon className="w-12 h-12 text-[#191919]"/>
-            <span>
+          <div className="flex gap-2" key={index}>
+            <section.icon className="w-8 h-12 text-[#191919]"/>
+            <div>
               <h2 className="text-lg md:text-xl font-semibold">
                 {section.title}
               </h2>
               <p className="text-base">{section.content}</p>
-            </span>
+            </div>
           </div>
         ))}
       </div>
