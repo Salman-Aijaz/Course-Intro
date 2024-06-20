@@ -116,14 +116,10 @@ const courses = [
 ];
 
 const CourseProgram = () => {
-  const [accordionOpen, setAccordionOpen] = useState<boolean[]>(
-    new Array(courses.length).fill(false)
-  );
+  const [accordionOpen, setAccordionOpen] = useState<number | null>(null);
 
   const toggleCourse = (index: number) => {
-    setAccordionOpen((previous) =>
-      previous.map((item, idx) => (idx === index ? !item : item))
-    );
+    setAccordionOpen((previous) => (previous === index ? null : index));
   };
 
   return (
@@ -131,22 +127,23 @@ const CourseProgram = () => {
       <div className="border border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg p-2 sm:p-4">
         <div className="flex items-center mb-4 gap-4">
           <div className="border dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 border-[#f0f0f0] rounded-md p-3 hidden sm:block">
-            <GoStar className="w-9 h-7"/>
+            <GoStar className="w-9 h-7" />
           </div>
           <div>
             <h2 className="text-xl font-semibold">COURSE OVERVIEW</h2>
             <p className="text-gray-500 font-medium">
               <span className="sm:hidden px-1">•</span>9 Sections
-              <br className="sm:hidden"/>
+              <br className="sm:hidden" />
               <span className="px-1">•</span>27 Lectures
-              <br className="sm:hidden"/>
+              <br className="sm:hidden" />
               <span className="px-1">•</span>2h 30min Total Length
             </p>
           </div>
         </div>
         <div
           className="flex flex-col border-t border-r border-l border-b-0 
-          border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg text-xs sm:text-base">
+          border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg text-xs sm:text-base"
+        >
           {courses.map((course, index) => (
             <React.Fragment key={index}>
               <div
@@ -158,15 +155,17 @@ const CourseProgram = () => {
               >
                 <div className="flex flex-1 items-center gap-1">
                   <IoIosArrowDown
-                    className={`transition-transform ease-in ${
-                      accordionOpen[index] ? "rotate-180" : ""
+                    className={`transition-transform duration-500 ${
+                      accordionOpen === index ? "rotate-180" : ""
                     }`}
                   />
                   <p>{course.title}</p>
                 </div>
                 <div className="hidden sm:flex items-center gap-2">
                   <p
-                    className={`${course.lectures.length <= 9 ? "w-16" : ""}  `}
+                    className={`${
+                      course.lectures.length <= 9 ? "w-[68px]" : ""
+                    }  `}
                   >
                     {course.lectures}
                   </p>
@@ -175,15 +174,16 @@ const CourseProgram = () => {
                 </div>
               </div>
               <div
-                className={`overflow-hidden transition-all duration-300  ${
-                  accordionOpen[index] ? "h-fit" : "h-0"
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  accordionOpen === index ? "max-h-screen" : "max-h-0"
                 }`}
               >
                 {course.lessons.map((lesson, lessonIndex) => (
                   <div
                     key={lessonIndex}
-                    className="dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 border-b border-[#f0f0f0]
-                    flex items-center  px-2 py-4 gap-2">
+                    className="dark:shadow-md dark:bg-transparent dark:border-zinc-950 hover:underline cursor-pointer border-b border-[#f0f0f0]
+                    flex items-center  pl-6 p-4 gap-2 "
+                  >
                     <p>{lesson.topicIcon}</p>
                     <p className="flex-1">{lesson.topic}</p>
                     <p>{course.time}</p>

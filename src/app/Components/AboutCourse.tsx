@@ -15,14 +15,14 @@ const AboutCourse = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-evenly px-4 lg:px-0">
       <div className="lg:w-1/3 my-10 lg:my-0 text-base">
-        <h1 className="font-bold text-3xl lg:text-4xl">About This Course</h1>
-        <p className="my-8">
+        <h2 className="text-4xl tracking-tight font-bold text-gray-900 dark:text-white">About <span className="text-blue-400">  This </span> Course</h2>
+        <p className="my-8 text-gray-500 dark:text-gray-400">
           A cryptocurrency is a digital currency that operates independently of
           central authorities like governments or banks. Transactions and
           ownership records are secured by cryptography and stored in a digital
           ledger.
         </p>
-        <p>
+        <p className="text-gray-500 dark:text-gray-400">
           Cryptocurrencies are often classified as assets rather than
           traditional currencies, with various legal treatments worldwide. Some
           systems use validators in a proof-of-stake model, where owners stake
@@ -44,7 +44,7 @@ const AboutCourse = () => {
           {cryptoFleetSkills.map((cryptoFleetSkill, ind) => (
             <div
               key={ind}
-              className="p-2  border border-zinc-600 rounded-sm text-sm font-semibold">
+              className="p-2  border border-zinc-700 rounded-sm text-sm font-semibold">
               {cryptoFleetSkill}
             </div>
           ))}

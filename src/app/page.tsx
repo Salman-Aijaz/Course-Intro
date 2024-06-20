@@ -5,7 +5,7 @@ import ThemeSwitch from "./Components/ThemeSwitch";
 
 export default function Home() {
   return (
-    <div className= "bg-white  dark:bg-zinc-950 space-y-16 dark:text-zinc-200 font-sans">
+    <div className= "bg-white  dark:bg-zinc-950 space-y-16 dark:text-zinc-200 font-sans select-none">
     <HeroSection/>
     <AboutCourse/>
     <CourseProgram/>
