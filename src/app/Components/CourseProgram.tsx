@@ -124,7 +124,7 @@ const CourseProgram = () => {
 
   return (
     <div className="mx-auto px-4 xl:px-0 max-w-screen-xl">
-      <div className="border border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg p-2 sm:p-4">
+      <div className="border border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg p-4">
         <div className="flex items-center mb-4 gap-4">
           <div className="border dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 border-[#f0f0f0] rounded-md p-3 hidden sm:block">
             <GoStar className="w-9 h-7" />
@@ -141,7 +141,7 @@ const CourseProgram = () => {
           </div>
         </div>
         <div
-          className="flex flex-col border-t border-r border-l border-b-0 
+          className="border-t border-r border-l border-b-0 
           border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg text-xs sm:text-base"
         >
           {courses.map((course, index) => (
@@ -153,9 +153,9 @@ const CourseProgram = () => {
                   } ${index === courses.length - 1 ? "rounded-b-lg" : ""}`}
                 onClick={() => toggleCourse(index)}
               >
-                <div className="flex flex-1 items-center gap-1">
+                <div className="flex flex-1 items-center gap-2">
                   <IoIosArrowDown
-                    className={`transition-transform duration-500 ${
+                    className={`transition-transform duration-700 ${
                       accordionOpen === index ? "rotate-180" : ""
                     }`}
                   />
@@ -165,7 +165,7 @@ const CourseProgram = () => {
                   <p
                     className={`${
                       course.lectures.length <= 9 ? "w-[68px]" : ""
-                    }  `}
+                    }`}
                   >
                     {course.lectures}
                   </p>
@@ -174,7 +174,7 @@ const CourseProgram = () => {
                 </div>
               </div>
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                className={`overflow-hidden transition-all duration-700 ease-in-out  ${
                   accordionOpen === index ? "max-h-screen" : "max-h-0"
                 }`}
               >
@@ -182,7 +182,7 @@ const CourseProgram = () => {
                   <div
                     key={lessonIndex}
                     className="dark:shadow-md dark:bg-transparent dark:border-zinc-950 hover:underline cursor-pointer border-b border-[#f0f0f0]
-                    flex items-center  pl-6 p-4 gap-2 "
+                    flex items-center pl-6 p-4 gap-2"
                   >
                     <p>{lesson.topicIcon}</p>
                     <p className="flex-1">{lesson.topic}</p>
