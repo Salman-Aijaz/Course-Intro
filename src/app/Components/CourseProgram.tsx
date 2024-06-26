@@ -116,10 +116,14 @@ const courses = [
 ];
 
 const CourseProgram = () => {
-  const [accordionOpen, setAccordionOpen] = useState<number | null>(null);
+  const [accordionOpen, setAccordionOpen] = useState<boolean[]>(
+    new Array(courses.length).fill(false)
+  );
 
   const toggleCourse = (index: number) => {
-    setAccordionOpen((previous) => (previous === index ? null : index));
+    setAccordionOpen((previous) =>
+      previous.map((item, idx) => (idx === index ? !item : item))
+    );
   };
 
   return (
@@ -130,8 +134,8 @@ const CourseProgram = () => {
             <GoStar className="w-9 h-7" />
           </div>
           <div>
-            <h2 className="text-xl font-semibold">COURSE OVERVIEW</h2>
-            <p className="text-gray-500 font-medium">
+            <h2 className="text-lg md:text-xl font-semibold">COURSE OVERVIEW</h2>
+            <p className="text-zinc-500 dark:text-zinc-400 font-normal">
               <span className="sm:hidden px-1">•</span>9 Sections
               <br className="sm:hidden" />
               <span className="px-1">•</span>27 Lectures
@@ -147,7 +151,7 @@ const CourseProgram = () => {
           {courses.map((course, index) => (
             <React.Fragment key={index}>
               <div
-                className={`flex px-2 py-4 border-b border-[#f0f0f0] dark:border-zinc-900  bg-[#f8f8f9] 
+                className={`flex px-2 py-4 border-b border-[#f0f0f0] dark:border-zinc-900 dark:text-zinc-300 bg-[#f8f8f9] 
                   dark:shadow-md dark:shadow-zinc-900 dark:bg-zinc-950 dark:hover:bg-zinc-900 cursor-pointer ${
                     index === 0 ? "rounded-t-lg" : ""
                   } ${index === courses.length - 1 ? "rounded-b-lg" : ""}`}
@@ -155,8 +159,8 @@ const CourseProgram = () => {
               >
                 <div className="flex flex-1 items-center gap-2">
                   <IoIosArrowDown
-                    className={`transition-transform duration-700 ${
-                      accordionOpen === index ? "rotate-180" : ""
+                    className={`transition-transform duration-300 ${
+                      accordionOpen[index] ? "rotate-180" : ""
                     }`}
                   />
                   <p>{course.title}</p>
@@ -169,24 +173,28 @@ const CourseProgram = () => {
                   >
                     {course.lectures}
                   </p>
-                  <p className="text-gray-500">•</p>
+                  <p className="text-zinc-400">•</p>
                   <p>{course.time}</p>
                 </div>
               </div>
               <div
-                className={`overflow-hidden transition-all duration-700 ease-in-out  ${
-                  accordionOpen === index ? "max-h-screen" : "max-h-0"
+                className={`overflow-hidden transition-all duration-300 ease-in-out  ${
+                  accordionOpen[index] ? "max-h-screen" : "max-h-0"
                 }`}
               >
                 {course.lessons.map((lesson, lessonIndex) => (
                   <div
                     key={lessonIndex}
                     className="dark:shadow-md dark:bg-transparent dark:border-zinc-950 hover:underline cursor-pointer border-b border-[#f0f0f0]
-                    flex items-center pl-6 p-4 gap-2"
+                    flex items-center pl-6 p-4 gap-3  text-sm font-normal"
                   >
                     <p>{lesson.topicIcon}</p>
-                    <p className="flex-1">{lesson.topic}</p>
-                    <p>{course.time}</p>
+                    <p className="flex-1 text-zinc-500 dark:text-zinc-400">
+                      {lesson.topic}
+                    </p>
+                    <p className="text-zinc-500 dark:text-zinc-400">
+                      {course.time}
+                    </p>
                   </div>
                 ))}
               </div>
