@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiVideo } from "react-icons/fi";
 import { GrCircleQuestion } from "react-icons/gr";
@@ -115,10 +115,11 @@ const courses = [
   },
 ];
 
-const CourseProgram = () => {
+const CourseProgram = ({ isHighlighted }: { isHighlighted: boolean }) => {
   const [accordionOpen, setAccordionOpen] = useState<boolean[]>(
     new Array(courses.length).fill(false)
   );
+  // console.log(isHighlighted);
 
   const toggleCourse = (index: number) => {
     setAccordionOpen((previous) =>
@@ -127,14 +128,22 @@ const CourseProgram = () => {
   };
 
   return (
-    <div className="mx-auto px-4 xl:px-0 max-w-screen-xl">
+    <div
+      className={`mx-auto px-4 xl:px-0 max-w-screen-xl transition-colors  duration-500 ease-linear ${
+        isHighlighted
+          ? "dark:bg-zinc-800 bg-zinc-200"
+          : "dark:bg-zinc-950"
+      }`}
+    >
       <div className="border border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg p-4">
         <div className="flex items-center mb-4 gap-4">
           <div className="border dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 border-[#f0f0f0] rounded-md p-3 hidden sm:block">
             <GoStar className="w-9 h-7" />
           </div>
           <div>
-            <h2 className="text-lg md:text-xl font-semibold">COURSE OVERVIEW</h2>
+            <h2 className="text-lg md:text-xl font-semibold">
+              COURSE OVERVIEW
+            </h2>
             <p className="text-zinc-500 dark:text-zinc-400 font-normal">
               <span className="sm:hidden px-1">•</span>9 Sections
               <br className="sm:hidden" />
@@ -146,15 +155,19 @@ const CourseProgram = () => {
         </div>
         <div
           className="border-t border-r border-l border-b-0 
-          border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900 dark:border-zinc-900 rounded-lg text-xs sm:text-base"
+          border-[#f0f0f0] dark:shadow-md dark:shadow-zinc-900  dark:border-zinc-900 rounded-lg text-xs sm:text-base"
         >
           {courses.map((course, index) => (
             <React.Fragment key={index}>
               <div
-                className={`flex px-2 py-4 border-b border-[#f0f0f0] dark:border-zinc-900 dark:text-zinc-300 bg-[#f8f8f9] 
-                  dark:shadow-md dark:shadow-zinc-900 dark:bg-zinc-950 dark:hover:bg-zinc-900 cursor-pointer ${
-                    index === 0 ? "rounded-t-lg" : ""
-                  } ${index === courses.length - 1 ? "rounded-b-lg" : ""}`}
+                className={`flex px-2 py-4 border-b border-[#f0f0f0] dark:border-zinc-900 dark:text-zinc-300 hover:bg-[#f8f8f9] 
+                  dark:shadow-md dark:shadow-zinc-900 transition-colors  duration-500 ease-linear ${
+                    isHighlighted
+                      ? "dark:bg-zinc-800 bg-zinc-200"
+                      : "dark:bg-zinc-950"
+                  } dark:hover:bg-zinc-900 cursor-pointer ${
+                  index === 0 ? "rounded-t-lg" : ""
+                } ${index === courses.length - 1 ? "rounded-b-lg" : ""}`}
                 onClick={() => toggleCourse(index)}
               >
                 <div className="flex flex-1 items-center gap-2">
